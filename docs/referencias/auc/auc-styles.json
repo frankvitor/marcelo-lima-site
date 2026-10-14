@@ -1,0 +1,614 @@
+{
+ "h1": [
+  {
+   "tag": "H1",
+   "cls": "mb-6 max-w-4xl font-[family-name:var(--font-manrop",
+   "txt": "ESPECIALISTAS EM IMÓVEIS DE LEILÃO",
+   "font": "__Manrope_f524cf",
+   "size": "60px",
+   "weight": "400",
+   "lh": "63px",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "-0.9px",
+   "tt": "uppercase"
+  }
+ ],
+ "h2": [
+  {
+   "tag": "H2",
+   "cls": "mb-4 text-3xl font-light md:text-4xl lg:text-5xl t",
+   "txt": "Atuamos em todas as frentes",
+   "font": "__Inter_d8ebd1",
+   "size": "36px",
+   "weight": "300",
+   "lh": "36px",
+   "color": "rgb(1, 1, 73)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "H2",
+   "cls": "mb-4 text-3xl font-light md:text-4xl lg:text-5xl t",
+   "txt": "Serviços de pré-arrematação",
+   "font": "__Inter_d8ebd1",
+   "size": "36px",
+   "weight": "300",
+   "lh": "36px",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "H2",
+   "cls": "mb-4 text-3xl font-light md:text-4xl lg:text-5xl t",
+   "txt": "Serviços de pós-arrematação",
+   "font": "__Inter_d8ebd1",
+   "size": "36px",
+   "weight": "300",
+   "lh": "36px",
+   "color": "rgb(1, 1, 73)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "H2",
+   "cls": "text-4xl md:text-5xl font-light text-[#010149] mb-",
+   "txt": "Especialistas em Oportunidades Imobiliár",
+   "font": "__Inter_d8ebd1",
+   "size": "36px",
+   "weight": "300",
+   "lh": "36px",
+   "color": "rgb(1, 1, 73)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  }
+ ],
+ "h3": [
+  {
+   "tag": "H3",
+   "cls": "mb-3 text-2xl font-bold text-[#010149]",
+   "txt": "Assessoria Completa",
+   "font": "__Inter_d8ebd1",
+   "size": "18px",
+   "weight": "700",
+   "lh": "24px",
+   "color": "rgb(1, 1, 73)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "H3",
+   "cls": "mb-3 text-2xl font-bold text-[#010149]",
+   "txt": "Plataforma de Assinatura",
+   "font": "__Inter_d8ebd1",
+   "size": "18px",
+   "weight": "700",
+   "lh": "24px",
+   "color": "rgb(1, 1, 73)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "H3",
+   "cls": "mb-3 text-2xl font-bold text-[#010149]",
+   "txt": "Anulação do Leilão",
+   "font": "__Inter_d8ebd1",
+   "size": "18px",
+   "weight": "700",
+   "lh": "24px",
+   "color": "rgb(1, 1, 73)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "H3",
+   "cls": "text-3xl md:text-4xl font-bold text-white mb-3",
+   "txt": "Principais Leiloeiros do Brasil",
+   "font": "__Inter_d8ebd1",
+   "size": "27px",
+   "weight": "700",
+   "lh": "30px",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  }
+ ],
+ "p": [
+  {
+   "tag": "P",
+   "cls": "mb-9 max-w-2xl text-base font-light leading-relaxe",
+   "txt": "Assessoria completa para fazer tudo por ",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "300",
+   "lh": "21px",
+   "color": "rgba(255, 255, 255, 0.85)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-3xl text-lg leading-relaxed md:text-",
+   "txt": "Faça você mesmo na plataforma, com auton",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "400",
+   "lh": "21px",
+   "color": "rgb(75, 85, 99)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "P",
+   "cls": "mb-5 text-[15px] leading-relaxed text-gray-600",
+   "txt": "Da busca e análise à arrematação, regula",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "400",
+   "lh": "24.375px",
+   "color": "rgb(75, 85, 99)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  }
+ ],
+ "a": [
+  {
+   "tag": "A",
+   "cls": "flex items-center gap-2 transition-opacity duratio",
+   "txt": "",
+   "font": "__Inter_d8ebd1",
+   "size": "12px",
+   "weight": "400",
+   "lh": "18px",
+   "color": "rgb(10, 10, 10)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "A",
+   "cls": "border-b-2 px-3 pb-1.5 pt-1 text-[15px] font-norma",
+   "txt": "Home",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "400",
+   "lh": "22.5px",
+   "color": "rgb(218, 165, 32)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "3px 9px 4.5px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "A",
+   "cls": "border-b-2 px-3 pb-1.5 pt-1 text-[15px] font-norma",
+   "txt": "Buscar imóveis em leilão",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "400",
+   "lh": "22.5px",
+   "color": "rgba(255, 255, 255, 0.9)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "3px 9px 4.5px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "A",
+   "cls": "border-b-2 px-3 pb-1.5 pt-1 text-[15px] font-norma",
+   "txt": "Veja nossos cases",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "400",
+   "lh": "22.5px",
+   "color": "rgba(255, 255, 255, 0.9)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "3px 9px 4.5px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "A",
+   "cls": "border-b-2 px-3 pb-1.5 pt-1 text-[15px] font-norma",
+   "txt": "Nossos Serviços",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "400",
+   "lh": "22.5px",
+   "color": "rgba(255, 255, 255, 0.9)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "3px 9px 4.5px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "A",
+   "cls": "border-b-2 px-3 pb-1.5 pt-1 text-[15px] font-norma",
+   "txt": "Planos",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "400",
+   "lh": "22.5px",
+   "color": "rgba(255, 255, 255, 0.9)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "3px 9px 4.5px",
+   "ls": "normal",
+   "tt": "none"
+  }
+ ],
+ "btn": [
+  {
+   "tag": "BUTTON",
+   "cls": "inline-flex items-center justify-center gap-2 whit",
+   "txt": "Entrar",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "600",
+   "lh": "22.5px",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(255, 255, 255, 0.05)",
+   "radius": "4px",
+   "shadow": "none",
+   "pad": "6px 18px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "inline-flex items-center justify-center gap-2 whit",
+   "txt": "Cadastrar",
+   "font": "__Inter_d8ebd1",
+   "size": "15px",
+   "weight": "600",
+   "lh": "22.5px",
+   "color": "rgb(1, 1, 73)",
+   "bg": "rgb(23, 23, 23)",
+   "radius": "4px",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+   "pad": "6px 18px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "xl:hidden p-2 text-white",
+   "txt": "",
+   "font": "__Inter_d8ebd1",
+   "size": "12px",
+   "weight": "400",
+   "lh": "18px",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "pad": "6px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "items-center justify-center gap-2 whitespace-nowra",
+   "txt": "",
+   "font": "__Inter_d8ebd1",
+   "size": "10.5px",
+   "weight": "500",
+   "lh": "15px",
+   "color": "rgb(218, 165, 32)",
+   "bg": "rgb(255, 255, 255)",
+   "radius": "4px",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "items-center justify-center gap-2 whitespace-nowra",
+   "txt": "",
+   "font": "__Inter_d8ebd1",
+   "size": "10.5px",
+   "weight": "500",
+   "lh": "15px",
+   "color": "rgb(218, 165, 32)",
+   "bg": "rgb(255, 255, 255)",
+   "radius": "4px",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "h-2 rounded-full transition-all duration-300 w-2 b",
+   "txt": "",
+   "font": "__Inter_d8ebd1",
+   "size": "12px",
+   "weight": "400",
+   "lh": "18px",
+   "color": "rgb(10, 10, 10)",
+   "bg": "rgb(209, 213, 219)",
+   "radius": "9999px",
+   "shadow": "none",
+   "pad": "0px",
+   "ls": "normal",
+   "tt": "none"
+  }
+ ],
+ "secoes": [
+  {
+   "tag": "HEADER",
+   "cls": "fixed top-0 left-0 right-0 z-[1100] tran",
+   "top": 0,
+   "h": 56,
+   "bg": "rgba(0, 0, 0, 0)",
+   "pt": "24px",
+   "pb": "0px",
+   "bgimg": "linear-gradient(rgba(6, 11, 47, 0.85), rgba(6, 11, 47, 0.3),"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative h-[100svh] min-h-[40rem] w-full",
+   "top": 0,
+   "h": 900,
+   "bg": "rgb(6, 11, 47)",
+   "pt": "0px",
+   "pb": "0px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative overflow-hidden bg-[#fffdf7] py",
+   "top": 900,
+   "h": 662,
+   "bg": "rgb(255, 253, 247)",
+   "pt": "60px",
+   "pb": "60px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative overflow-hidden bg-[#010149] py",
+   "top": 1562,
+   "h": 639,
+   "bg": "rgb(1, 1, 73)",
+   "pt": "60px",
+   "pb": "60px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative overflow-hidden bg-[#fffdf7] py",
+   "top": 2201,
+   "h": 855,
+   "bg": "rgb(255, 253, 247)",
+   "pt": "60px",
+   "pb": "60px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "py-16 bg-[#010149] border-y border-[#010",
+   "top": 3055,
+   "h": 374,
+   "bg": "rgb(1, 1, 73)",
+   "pt": "48px",
+   "pb": "48px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "py-20 bg-[#FAF8EF]",
+   "top": 3429,
+   "h": 633,
+   "bg": "rgb(250, 248, 239)",
+   "pt": "60px",
+   "pb": "60px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "bg-[#010149] py-20 overflow-hidden",
+   "top": 4062,
+   "h": 547,
+   "bg": "rgb(1, 1, 73)",
+   "pt": "60px",
+   "pb": "60px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "py-16 md:py-20 relative overflow-hidden ",
+   "top": 4609,
+   "h": 354,
+   "bg": "rgb(250, 248, 239)",
+   "pt": "60px",
+   "pb": "60px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "FOOTER",
+   "cls": "bg-[#010149] pt-20 pb-10 border-t border",
+   "top": 4963,
+   "h": 606,
+   "bg": "rgb(1, 1, 73)",
+   "pt": "60px",
+   "pb": "30px",
+   "bgimg": "none"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "",
+   "top": 5569,
+   "h": 0,
+   "bg": "rgba(0, 0, 0, 0)",
+   "pt": "0px",
+   "pb": "0px",
+   "bgimg": "none"
+  }
+ ],
+ "topCores": [
+  [
+   "rgb(10, 10, 10)",
+   464
+  ],
+  [
+   "rgb(255, 255, 255)",
+   249
+  ],
+  [
+   "rgb(218, 165, 32)",
+   214
+  ],
+  [
+   "rgb(0, 0, 0)",
+   101
+  ],
+  [
+   "rgb(1, 1, 73)",
+   79
+  ],
+  [
+   "rgb(184, 134, 11)",
+   57
+  ],
+  [
+   "rgb(156, 163, 175)",
+   31
+  ],
+  [
+   "rgb(55, 65, 81)",
+   21
+  ],
+  [
+   "rgb(75, 85, 99)",
+   19
+  ],
+  [
+   "rgb(107, 114, 128)",
+   18
+  ],
+  [
+   "rgb(209, 213, 219)",
+   15
+  ],
+  [
+   "rgba(255, 255, 255, 0.9)",
+   7
+  ],
+  [
+   "rgba(255, 255, 255, 0.05)",
+   4
+  ],
+  [
+   "rgb(6, 11, 47)",
+   2
+  ]
+ ],
+ "container": [
+  {
+   "cls": "container mx-auto px-4 md:px-6 flex item",
+   "w": 1280,
+   "mw": "1280px"
+  },
+  {
+   "cls": "absolute inset-0 z-0 bg-[#060b2f]",
+   "w": 1440,
+   "mw": "none"
+  },
+  {
+   "cls": "relative z-20 mx-auto h-full w-full max-",
+   "w": 1440,
+   "mw": "1920px"
+  },
+  {
+   "cls": "pointer-events-none absolute inset-0 bg-",
+   "w": 1440,
+   "mw": "none"
+  },
+  {
+   "cls": "pointer-events-none absolute inset-0 bg-",
+   "w": 1440,
+   "mw": "none"
+  },
+  {
+   "cls": "container relative z-10 mx-auto max-w-7x",
+   "w": 960,
+   "mw": "960px"
+  }
+ ],
+ "fontes": [
+  "__Inter_d8ebd1",
+  "__Manrope_f524cf"
+ ],
+ "img": [
+  "https://www.aucleiloes.com.br/images/logo-padrao.png",
+  "https://www.aucleiloes.com.br/capa-site.webp",
+  "https://www.aucleiloes.com.br/images/logo-padrao.png",
+  "https://www.aucleiloes.com.br/caixa.png",
+  "https://www.aucleiloes.com.br/santander.png?v=2024",
+  "https://www.aucleiloes.com.br/itau.png",
+  "https://www.aucleiloes.com.br/bradesco.png",
+  "https://www.aucleiloes.com.br/inter.png"
+ ]
+}
