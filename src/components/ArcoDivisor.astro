@@ -1,0 +1,15 @@
+---
+// Arco (semi-elipse) que sobe do fim de uma seção vinho. `cor` = cor da seção seguinte.
+interface Props {
+  cor?: string;
+}
+const { cor = 'var(--color-off-white)' } = Astro.props;
+---
+
+<div class="pointer-events-none flex h-20 w-full justify-center sm:h-36" aria-hidden="true">
+  <div
+    class="h-full w-[130%] rounded-t-[50%] sm:w-[75%]"
+    style={`background:${cor};border-top-left-radius:50% 100%;border-top-right-radius:50% 100%`}
+  >
+  </div>
+</div>

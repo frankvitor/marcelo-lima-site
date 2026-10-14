@@ -1,0 +1,12 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+}
+const { src, alt, class: classe = '' } = Astro.props;
+---
+
+<div class={`duotone ${classe}`}>
+  <img src={src} alt={alt} loading="lazy" decoding="async" />
+</div>

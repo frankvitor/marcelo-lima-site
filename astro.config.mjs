@@ -10,6 +10,6 @@ const site = process.env.PUBLIC_SITE_URL || 'https://exemplo.com.br';
 export default defineConfig({
   site,
   output: 'static',
-  integrations: [preact(), sitemap()],
+  integrations: [preact(), sitemap({ filter: (page) => !page.includes('/styleguide') })],
   vite: { plugins: [tailwindcss()] },
 });

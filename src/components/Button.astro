@@ -1,0 +1,20 @@
+---
+interface Props {
+  href?: string;
+  variante?: 'primario' | 'secundario' | 'claro' | 'contorno';
+  class?: string;
+  [chave: string]: unknown;
+}
+const { href, variante = 'primario', class: classe = '', ...resto } = Astro.props;
+const base =
+  'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-titulo text-sm font-bold tracking-wide transition-colors duration-200 cursor-pointer';
+const variantes = {
+  primario: 'bg-vinho-700 text-branco hover:bg-vinho-900',
+  secundario: 'bg-vinho-50 text-vinho-700 hover:bg-linha',
+  claro: 'bg-branco text-vinho-700 hover:bg-vinho-50',
+  contorno: 'border-2 border-vinho-700 text-vinho-700 hover:bg-vinho-700 hover:text-branco',
+};
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag href={href} class={`${base} ${variantes[variante]} ${classe}`} {...resto}><slot /></Tag>

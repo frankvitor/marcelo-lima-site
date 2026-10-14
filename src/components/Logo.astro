@@ -1,0 +1,16 @@
+---
+import horizontal from '../assets/brand/logo-horizontal.svg?raw';
+import negativa from '../assets/brand/logo-negativa.svg?raw';
+import monograma from '../assets/brand/logo-monograma.svg?raw';
+
+interface Props {
+  variante?: 'horizontal' | 'negativa' | 'monograma';
+  class?: string;
+}
+const { variante = 'horizontal', class: classe = 'h-12 w-auto' } = Astro.props;
+const svgs = { horizontal, negativa, monograma };
+// Inline para herdar as fontes da página (Sora / DM Sans).
+const svg = svgs[variante].replace('<svg ', `<svg class="${classe}" `);
+---
+
+<Fragment set:html={svg} />

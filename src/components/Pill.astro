@@ -1,0 +1,18 @@
+---
+interface Props {
+  tom?: 'solida' | 'clara' | 'branca';
+  class?: string;
+}
+const { tom = 'solida', class: classe = '' } = Astro.props;
+const tons = {
+  solida: 'bg-vinho-700 text-branco',
+  clara: 'bg-vinho-50 text-vinho-700',
+  branca: 'bg-branco text-vinho-700',
+};
+---
+
+<span
+  class={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-titulo text-sm font-bold ${tons[tom]} ${classe}`}
+>
+  <slot />
+</span>

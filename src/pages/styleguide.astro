@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Logo from '../components/Logo.astro';
+import Button from '../components/Button.astro';
+import Pill from '../components/Pill.astro';
+import TituloMoldura from '../components/TituloMoldura.astro';
+import FichaTecnica from '../components/FichaTecnica.astro';
+import FotoDuotone from '../components/FotoDuotone.astro';
+import ArcoDivisor from '../components/ArcoDivisor.astro';
+import Icon from '../components/Icon.astro';
+import predio from '../assets/img/predio-placeholder.svg';
+
+const cores = [
+  { nome: 'vinho-900', hex: '#5E0A22', uso: 'Fundos profundos, rodapé', escuro: true },
+  { nome: 'vinho-700', hex: '#A3123A', uso: 'Primária: botões, pílulas', escuro: true },
+  { nome: 'vinho-500', hex: '#C8264F', uso: 'Hover, detalhes', escuro: true },
+  { nome: 'vinho-50', hex: '#FBEFF2', uso: 'Fundos tintados', escuro: false },
+  { nome: 'grafite', hex: '#1C1C22', uso: 'Texto principal', escuro: true },
+  { nome: 'cinza', hex: '#6B6B75', uso: 'Texto secundário', escuro: true },
+  { nome: 'linha', hex: '#E8E2E0', uso: 'Bordas e divisores', escuro: false },
+  { nome: 'off-white', hex: '#FAF7F5', uso: 'Fundo base', escuro: false },
+  { nome: 'branco', hex: '#FFFFFF', uso: 'Cards', escuro: false },
+];
+---
+
+<BaseLayout title="Styleguide · Marcelo Lima" noindex>
+  <main>
+    <header class="bg-vinho-900 px-5 py-10 text-branco">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4">
+        <Logo variante="negativa" class="h-12 w-auto" />
+        <Pill tom="branca">Styleguide · provisório · noindex</Pill>
+      </div>
+    </header>
+
+    <div class="mx-auto flex max-w-6xl flex-col gap-20 px-5 py-16">
+      <!-- Logo -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Logo" />
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="flex items-center justify-center rounded-card border border-linha bg-branco p-8">
+            <Logo variante="horizontal" class="h-14 w-auto" />
+          </div>
+          <div class="flex items-center justify-center rounded-card bg-vinho-700 p-8">
+            <Logo variante="negativa" class="h-14 w-auto" />
+          </div>
+          <div class="flex items-center justify-center gap-6 rounded-card border border-linha bg-vinho-50 p-8">
+            <Logo variante="monograma" class="size-16" />
+            <Logo variante="monograma" class="size-10" />
+            <Logo variante="monograma" class="size-6" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Paleta -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Paleta" />
+        <ul class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+          {
+            cores.map((c) => (
+              <li class="overflow-hidden rounded-card border border-linha bg-branco">
+                <div
+                  class={`h-24 ${c.escuro ? 'text-branco' : 'text-grafite'} flex items-end p-3 text-sm font-medium`}
+                  style={`background:${c.hex}`}
+                >
+                  {c.hex}
+                </div>
+                <div class="p-3">
+                  <p class="font-titulo text-sm font-bold">{c.nome}</p>
+                  <p class="text-sm text-cinza">{c.uso}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <!-- Tipografia -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Tipografia" />
+        <div class="grid gap-8 rounded-card bg-branco p-8 shadow-card md:grid-cols-2">
+          <div class="flex flex-col gap-4">
+            <p class="text-sm font-medium text-cinza">Sora 800 · caixa-alta · títulos</p>
+            <h1 class="text-4xl text-vinho-700 sm:text-5xl">Compre com segurança, do edital às chaves</h1>
+            <h2 class="text-2xl">Riscos que eu evito por você</h2>
+            <h3 class="text-lg normal-case">Análise de matrícula</h3>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="text-sm font-medium text-cinza">DM Sans 400 / 500 · texto</p>
+            <p class="text-lg">
+              Atendemos todo o Brasil, 100% online. Eu conduzo o processo e coordeno os advogados
+              parceiros, para você decidir com informação.
+            </p>
+            <p class="font-medium">Peso 500: destaque dentro do texto corrido.</p>
+            <p class="text-cinza">Texto secundário em cinza, para apoio e legendas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Botões e pílulas -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Botões e pílulas" />
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-wrap items-center gap-4">
+            <Button>Quero começar</Button>
+            <Button variante="secundario">Saiba mais</Button>
+            <Button variante="contorno">Falar no WhatsApp <Icon nome="seta" class="size-4" /></Button>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 rounded-card bg-vinho-700 p-6">
+            <Button variante="claro">Botão claro sobre vinho</Button>
+            <Pill tom="branca">Atendemos todo o Brasil · 100% online</Pill>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <Pill>Desconto real: [PREENCHER]%</Pill>
+            <Pill tom="clara">Judicial</Pill>
+            <Pill tom="clara">Extrajudicial</Pill>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Cards" />
+        <div class="grid gap-6 rounded-card bg-vinho-700 p-6 sm:p-10 md:grid-cols-3">
+          {
+            ['Quero arrematar um imóvel', 'Já encontrei um imóvel', 'Já arrematei e preciso de ajuda'].map(
+              (t, i) => (
+                <article class="flex flex-col gap-4 rounded-card bg-branco p-6 shadow-card">
+                  <span class="font-titulo text-sm font-bold text-vinho-500">0{i + 1}</span>
+                  <h3 class="text-xl text-grafite">{t}</h3>
+                  <p class="text-cinza">Texto de apoio curto explicando a jornada, sem juridiquês.</p>
+                  <Button variante="secundario" class="mt-auto self-start">
+                    Começar <Icon nome="seta" class="size-4" />
+                  </Button>
+                </article>
+              ),
+            )
+          }
+        </div>
+        <article class="rounded-card bg-vinho-50 p-6">
+          <p class="font-titulo font-bold text-vinho-700">Card de apoio (fundo vinho-50)</p>
+          <p class="text-cinza">Usado para avisos, observações e conteúdo secundário.</p>
+        </article>
+      </section>
+
+      <!-- Moldura -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Moldura de título" />
+        <div class="flex flex-wrap items-start gap-6">
+          <TituloMoldura titulo="Como funciona" />
+          <div class="rounded-card bg-vinho-700 p-6">
+            <TituloMoldura titulo="Riscos que eu evito" claro />
+          </div>
+        </div>
+      </section>
+
+      <!-- Ficha técnica -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Ficha técnica" />
+        <article class="max-w-3xl rounded-card bg-branco p-6 shadow-card">
+          <div class="mb-2 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p class="font-titulo text-lg font-extrabold">Apartamento · [CIDADE/UF]</p>
+              <p class="text-sm text-cinza">Exemplo ilustrativo</p>
+            </div>
+            <Pill>Desconto real: [PREENCHER]%</Pill>
+          </div>
+          <FichaTecnica
+            itens={[
+              { icone: 'casa', valor: 'R$ [PREENCHER]', rotulo: 'Avaliação' },
+              { icone: 'dinheiro', valor: 'R$ [PREENCHER]', rotulo: 'Arrematado' },
+              { icone: 'percentual', valor: 'R$ [PREENCHER]', rotulo: 'Custo total' },
+              { icone: 'relogio', valor: '[PREENCHER]', rotulo: 'Prazo até as chaves' },
+              { icone: 'pin', valor: '[CIDADE/UF]', rotulo: 'Localização' },
+              { icone: 'chave', valor: '[PREENCHER]', rotulo: 'Situação' },
+            ]}
+          />
+        </article>
+      </section>
+
+      <!-- Duotone -->
+      <section class="flex flex-col gap-6">
+        <TituloMoldura titulo="Foto em duotone" />
+        <p class="max-w-2xl text-cinza">
+          Imagem ilustrativa provisória (desenho). Quando houver fotos reais de arquitetura, o mesmo
+          filtro é aplicado automaticamente.
+        </p>
+        <FotoDuotone
+          src={predio.src}
+          alt="Ilustração de edifícios em tons de vinho"
+          class="h-72 rounded-card sm:h-96"
+        />
+      </section>
+    </div>
+
+    <!-- Arco divisor -->
+    <section class="bg-vinho-700 pt-16 text-center text-branco">
+      <div class="mx-auto flex max-w-3xl flex-col items-center gap-5 px-5">
+        <Icon nome="chave" class="size-10" />
+        <h2 class="text-3xl sm:text-5xl">Arco divisor e chaves</h2>
+        <p class="text-branco/85">A seção vinho termina num semicírculo branco que leva à próxima.</p>
+      </div>
+      <div class="mt-10 overflow-hidden"><ArcoDivisor cor="var(--color-off-white)" /></div>
+    </section>
+    <div class="h-16 bg-off-white"></div>
+  </main>
+</BaseLayout>

@@ -5,8 +5,13 @@ import { site } from '../config/site';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
-const { title = `${site.nome} · ${site.descritor}`, description = site.descricao } = Astro.props;
+const {
+  title = `${site.nome} · ${site.descritor}`,
+  description = site.descricao,
+  noindex = false,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,6 +21,8 @@ const { title = `${site.nome} · ${site.descritor}`, description = site.descrica
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#A3123A" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
   </head>
   <body>

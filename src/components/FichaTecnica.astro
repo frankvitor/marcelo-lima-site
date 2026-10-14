@@ -1,0 +1,25 @@
+---
+import Icon from './Icon.astro';
+
+interface Item {
+  icone: 'casa' | 'relogio' | 'dinheiro' | 'pin' | 'chave' | 'percentual';
+  valor: string;
+  rotulo: string;
+}
+interface Props {
+  itens: Item[];
+}
+const { itens } = Astro.props;
+---
+
+<dl class="grid grid-cols-2 sm:grid-cols-3">
+  {
+    itens.map((i) => (
+      <div class="flex flex-col items-center gap-1 border-linha px-4 py-4 text-center [&:not(:nth-child(-n+2))]:border-t sm:[&:not(:nth-child(-n+3))]:border-t sm:[&:not(:nth-child(3n+1))]:border-l">
+        <Icon nome={i.icone} class="size-7 text-vinho-700" />
+        <dd class="font-titulo text-xl font-extrabold text-grafite">{i.valor}</dd>
+        <dt class="text-sm text-cinza">{i.rotulo}</dt>
+      </div>
+    ))
+  }
+</dl>

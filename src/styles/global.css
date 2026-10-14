@@ -4,4 +4,95 @@
 @import '@fontsource/dm-sans/400.css';
 @import '@fontsource/dm-sans/500.css';
 
-/* Tokens de design entram na Etapa 2 (@theme). */
+@theme {
+  --color-vinho-900: #5e0a22;
+  --color-vinho-700: #a3123a;
+  --color-vinho-500: #c8264f;
+  --color-vinho-50: #fbeff2;
+  --color-grafite: #1c1c22;
+  --color-cinza: #6b6b75;
+  --color-linha: #e8e2e0;
+  --color-off-white: #faf7f5;
+  --color-branco: #ffffff;
+
+  --font-titulo: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-texto: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 24px;
+  --radius-moldura: 16px;
+
+  --shadow-card: 0 10px 30px -8px rgb(94 10 34 / 0.25), 0 2px 6px rgb(94 10 34 / 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-off-white);
+    color: var(--color-grafite);
+    font-family: var(--font-texto);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-titulo);
+    font-weight: 800;
+    line-height: 1.05;
+  }
+  h1,
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-vinho-500);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility titulo-display {
+  font-family: var(--font-titulo);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+
+/* Foto em duotone: imagem em tons de cinza multiplicada sobre a cor da marca */
+.duotone {
+  position: relative;
+  background: var(--color-vinho-700);
+  overflow: hidden;
+  isolation: isolate;
+}
+.duotone > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.15) brightness(1.05);
+  mix-blend-mode: multiply;
+}
+.duotone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(94 10 34 / 0.55), transparent 60%);
+  pointer-events: none;
+}
