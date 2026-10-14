@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../config/site';
+
+// Texto-base (LGPD). Revisar com advogado antes de publicar. Itens [PREENCHER] dependem do cliente.
+const atualizacao = '[PREENCHER: data da última atualização]';
+---
+
+<BaseLayout
+  title={`Política de privacidade · ${site.nome}`}
+  description="Como o site de Marcelo Lima trata os dados pessoais, conforme a Lei Geral de Proteção de Dados (LGPD)."
+>
+  <Header />
+  <main id="conteudo" class="mx-auto max-w-3xl px-5 py-14 sm:py-20">
+    <h1 class="mb-3 text-3xl sm:text-4xl">Política de privacidade</h1>
+    <p class="mb-10 text-sm text-cinza">Última atualização: {atualizacao}</p>
+
+    <div class="flex flex-col gap-8 text-cinza [&_h2]:mb-2 [&_h2]:text-xl [&_h2]:normal-case [&_h2]:text-ardosia [&_ul]:ml-5 [&_ul]:list-disc [&_ul]:space-y-1">
+      <section>
+        <h2>1. Quem somos</h2>
+        <p>
+          Este site é operado por {site.nome} (CNPJ/CPF: {site.cnpj}), responsável pelo tratamento dos dados
+          pessoais descritos aqui (controlador). Contato para assuntos de privacidade: {site.email}.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Quais dados coletamos</h2>
+        <p>Coletamos apenas o que você informa ao usar o questionário e o simulador:</p>
+        <ul>
+          <li>nome e número de WhatsApp;</li>
+          <li>estado e cidade de interesse, objetivo, faixa de investimento, forma de pagamento e experiência com leilões;</li>
+          <li>valores informados no simulador, se você escolher pedir uma análise.</li>
+        </ul>
+        <p class="mt-2">
+          Também podem ser coletados dados de navegação (como páginas visitadas) por ferramentas de análise, somente
+          se estiverem ativadas neste site (ver item 6).
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Para que usamos</h2>
+        <ul>
+          <li>entrar em contato com você e responder ao seu pedido de atendimento;</li>
+          <li>entender o seu perfil para orientar a conversa sobre leilões de imóveis;</li>
+          <li>melhorar o site e a comunicação, quando houver ferramentas de análise ativas.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Base legal</h2>
+        <p>
+          O tratamento é feito com base no seu consentimento e, quando aplicável, para a realização de procedimentos
+          preliminares a um contrato solicitado por você (LGPD, art. 7º). [PREENCHER: revisar com advogado]
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Compartilhamento</h2>
+        <p>
+          Ao concluir o questionário, você é direcionado ao WhatsApp (serviço da Meta) com uma mensagem resumindo suas
+          respostas; o uso do WhatsApp segue os termos e a política de privacidade da própria plataforma. Quando
+          necessário ao atendimento, podem participar advogados parceiros e outros especialistas, sempre sob dever de
+          sigilo. Não vendemos seus dados. [PREENCHER: confirmar se há CRM ou outras ferramentas]
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Cookies e análise de uso</h2>
+        <p>
+          O site pode usar ferramentas como Google Analytics e Meta Pixel para medir audiência e campanhas. Elas ficam
+          desativadas por padrão e só funcionam se forem habilitadas pelo responsável do site. [PREENCHER: informar
+          quais estão ativas e incluir aviso de cookies, se aplicável]
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Por quanto tempo guardamos</h2>
+        <p>[PREENCHER: prazo de retenção dos dados de contato]</p>
+      </section>
+
+      <section>
+        <h2>8. Seus direitos</h2>
+        <p>Você pode, a qualquer momento, solicitar:</p>
+        <ul>
+          <li>confirmação de que tratamos seus dados e acesso a eles;</li>
+          <li>correção de dados incompletos ou desatualizados;</li>
+          <li>anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+          <li>portabilidade e informação sobre compartilhamentos;</li>
+          <li>revogação do consentimento e eliminação dos dados tratados com base nele.</li>
+        </ul>
+        <p class="mt-2">Para exercer seus direitos, escreva para {site.email}.</p>
+      </section>
+
+      <section>
+        <h2>9. Alterações</h2>
+        <p>Esta política pode ser atualizada. A data da última revisão fica no topo da página.</p>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

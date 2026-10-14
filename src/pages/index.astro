@@ -14,12 +14,13 @@ import Sobre from '../components/secoes/Sobre.astro';
 import Depoimentos from '../components/secoes/Depoimentos.astro';
 import Faq from '../components/secoes/Faq.astro';
 import CtaFinal from '../components/secoes/CtaFinal.astro';
+import { professionalService } from '../lib/jsonld';
 import Quiz from '../components/islands/Quiz';
 ---
 
-<BaseLayout>
+<BaseLayout jsonLd={professionalService(Astro.site!.href)}>
   <Header />
-  <main>
+  <main id="conteudo">
     <Hero />
     <Jornadas />
     <ComoFunciona />
