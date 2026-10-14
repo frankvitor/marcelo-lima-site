@@ -146,15 +146,15 @@ export const atendimento = {
 
 export const sobre = {
   titulo: 'Sobre o Marcelo',
-  fotoAlt: 'Retrato de Marcelo Lima (foto a ser enviada)',
+  fotoAlt: 'Marcelo Lima sorrindo, de casaco preto e cachecol, em uma rua movimentada à noite',
   paragrafos: [
     'Sou o Marcelo Lima, consultor em leilões de imóveis. Ajudo pessoas e investidores a comprar imóveis em leilão com mais segurança.',
     'Eu conduzo o processo do início ao fim e coordeno advogados parceiros e outros especialistas na análise jurídica. Assim, você tem um interlocutor só, em linguagem simples.',
     '[PREENCHER: história pessoal, trajetória no mercado de leilões e o que motivou o trabalho]',
   ],
   destaques: [
-    { valor: '[PREENCHER]', rotulo: 'Anos de experiência' },
-    { valor: '[PREENCHER]', rotulo: 'Arrematações acompanhadas' },
+    { valor: '5+', rotulo: 'Anos de experiência' },
+    { valor: '100+', rotulo: 'Arrematações acompanhadas' },
   ],
 };
 

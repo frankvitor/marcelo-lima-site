@@ -17,4 +17,6 @@ Todas as fotos vêm do [Unsplash](https://unsplash.com) e são licenciadas sob a
 
 Observações:
 - As fotos são genéricas de banco de imagens: não retratam imóveis, clientes ou o Marcelo. Quando o cliente enviar fotos próprias, substitua os arquivos mantendo os nomes.
-- Foto do Marcelo: continua pendente (ver `docs/PENDENCIAS.md`).
+
+## Foto do Marcelo
+`foto-marcelo.png`: foto enviada pelo próprio cliente para uso no site (seção Sobre).

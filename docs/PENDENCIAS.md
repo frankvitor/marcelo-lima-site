@@ -12,9 +12,9 @@ Para localizar no código: `grep -rn "PREENCHER" src`.
 
 ## 2. Sobre o Marcelo — `src/data/home.ts` (bloco `sobre`)
 - [ ] História pessoal e trajetória no mercado de leilões (texto em primeira pessoa)
-- [ ] Anos de experiência
-- [ ] Número de arrematações acompanhadas
-- [ ] Foto profissional (hoje há uma silhueta provisória em `src/assets/img/foto-marcelo-placeholder.svg`)
+- [x] Anos de experiência (informado: 5+)
+- [x] Número de arrematações acompanhadas (informado: 100+)
+- [x] Foto recebida (retrato casual, em rua à noite). Se o cliente preferir uma foto profissional de estúdio, substituir `src/assets/img/foto-marcelo.png`
 
 ## 3. Cases — `src/content/cases.json`
 - [ ] Casos reais, com autorização do cliente: tipo de imóvel, cidade/UF, valor de avaliação, valor arrematado, custo total, desconto real e prazo até as chaves
