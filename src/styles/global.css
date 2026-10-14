@@ -77,6 +77,25 @@
   letter-spacing: -0.015em;
 }
 
+/* Animação de entrada: só esconde se o JS estiver ativo */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.js .reveal.visivel {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Foto em duotone: imagem em tons de cinza multiplicada sobre âmbar (duotone claro) */
 .duotone {
   position: relative;

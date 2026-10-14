@@ -1,0 +1,75 @@
+---
+import Logo from './Logo.astro';
+import Button from './Button.astro';
+import Icon from './Icon.astro';
+import { nav } from '../data/home';
+import { linkWhatsapp } from '../lib/whatsapp';
+
+const whats = linkWhatsapp('Olá, Marcelo! Vim pelo site e gostaria de conversar sobre leilão de imóveis.');
+---
+
+<header class="sticky top-0 z-40 border-b border-linha bg-gelo/90 backdrop-blur" data-header>
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:h-20">
+    <a href="#inicio" aria-label="Marcelo Lima — início"><Logo class="h-9 w-auto sm:h-11" /></a>
+
+    <nav aria-label="Principal" class="hidden items-center gap-7 lg:flex">
+      {
+        nav.map((i) => (
+          <a href={i.href} class="text-sm font-medium text-ardosia transition-colors hover:text-cinza">
+            {i.rotulo}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <Button href={whats} class="max-sm:hidden !px-5 !py-2.5" data-whatsapp>
+        <Icon nome="mensagem" class="size-4" /> Falar no WhatsApp
+      </Button>
+      <button
+        type="button"
+        class="grid size-11 place-items-center rounded-full border border-linha bg-branco text-ardosia lg:hidden"
+        aria-expanded="false"
+        aria-controls="menu-mobile"
+        aria-label="Abrir menu"
+        data-menu-botao
+      >
+        <Icon nome="menu" class="size-5" />
+      </button>
+    </div>
+  </div>
+
+  <nav id="menu-mobile" aria-label="Menu mobile" class="hidden border-t border-linha bg-gelo lg:hidden" data-menu>
+    <ul class="mx-auto flex max-w-6xl flex-col px-5 py-3">
+      {
+        nav.map((i) => (
+          <li>
+            <a href={i.href} class="block py-3 font-medium text-ardosia">
+              {i.rotulo}
+            </a>
+          </li>
+        ))
+      }
+      <li class="py-3">
+        <Button href={whats} class="w-full" data-whatsapp>
+          <Icon nome="mensagem" class="size-4" /> Falar no WhatsApp
+        </Button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const botao = document.querySelector<HTMLButtonElement>('[data-menu-botao]');
+  const menu = document.querySelector<HTMLElement>('[data-menu]');
+  const alternar = (abrir: boolean) => {
+    botao?.setAttribute('aria-expanded', String(abrir));
+    botao?.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+    menu?.classList.toggle('hidden', !abrir);
+  };
+  botao?.addEventListener('click', () => alternar(botao.getAttribute('aria-expanded') !== 'true'));
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => alternar(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') alternar(false);
+  });
+</script>

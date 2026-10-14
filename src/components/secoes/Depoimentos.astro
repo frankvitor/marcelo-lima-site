@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import TituloMoldura from '../TituloMoldura.astro';
+import { depoimentos as textos } from '../../data/home';
+
+const lista = (await getCollection('depoimentos')).sort((a, b) => a.data.ordem - b.data.ordem);
+---
+
+{
+  lista.length > 0 && (
+    <section id="depoimentos" class="scroll-mt-24 bg-claro py-16 sm:py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="reveal mb-10">
+          <TituloMoldura titulo={textos.titulo} />
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          {lista.map(({ data: d }) => (
+            <figure class="reveal flex flex-col gap-4 rounded-card bg-branco p-6 shadow-card">
+              <blockquote class="text-ardosia">“{d.texto}”</blockquote>
+              <figcaption class="mt-auto text-sm text-cinza">
+                <strong class="font-titulo text-ardosia">{d.nome}</strong>
+                {d.cidade && <span> · {d.cidade}</span>}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,19 @@
+---
+import Button from '../Button.astro';
+import Icon from '../Icon.astro';
+import { ctaFinal } from '../../data/home';
+---
+
+<section id="contato" class="scroll-mt-24 bg-ardosia pt-20 text-center text-branco sm:pt-28">
+  <div class="reveal mx-auto max-w-3xl px-5">
+    <h2 class="text-4xl sm:text-6xl">{ctaFinal.titulo}</h2>
+  </div>
+  <!-- Arco branco com as chaves, como na referência: a seção termina num semicírculo apoiado no rodapé -->
+  <div class="reveal mx-auto mt-12 max-w-3xl rounded-t-[999px] bg-gelo px-8 pb-14 pt-16 text-ardosia sm:mt-16 sm:pt-24">
+    <div class="mx-auto flex max-w-md flex-col items-center gap-5">
+      <span class="grid size-16 place-items-center rounded-full bg-ambar"><Icon nome="chave" class="size-8" /></span>
+      <p class="text-lg text-cinza">{ctaFinal.texto}</p>
+      <Button data-quiz>{ctaFinal.cta} <Icon nome="seta" class="size-4" /></Button>
+    </div>
+  </div>
+</section>

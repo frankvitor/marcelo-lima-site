@@ -1,0 +1,34 @@
+---
+import TituloMoldura from '../TituloMoldura.astro';
+import FotoDuotone from '../FotoDuotone.astro';
+import Button from '../Button.astro';
+import Icon from '../Icon.astro';
+import { sobre } from '../../data/home';
+import { linkWhatsapp } from '../../lib/whatsapp';
+import foto from '../../assets/img/foto-marcelo-placeholder.svg';
+
+const whats = linkWhatsapp('Olá, Marcelo! Gostaria de conversar com você.');
+---
+
+<section id="sobre" class="scroll-mt-24 py-16 sm:py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[0.8fr_1.2fr]">
+    <div class="reveal mx-auto w-full max-w-sm">
+      <FotoDuotone src={foto.src} alt={sobre.fotoAlt} class="aspect-[4/5] rounded-card shadow-card" />
+    </div>
+    <div class="reveal flex flex-col items-start gap-5">
+      <TituloMoldura titulo={sobre.titulo} />
+      {sobre.paragrafos.map((p) => <p class="text-lg text-cinza">{p}</p>)}
+      <dl class="grid w-full max-w-md grid-cols-2 gap-4">
+        {
+          sobre.destaques.map((d) => (
+            <div class="rounded-card bg-branco p-4 shadow-card">
+              <dd class="break-words font-titulo text-xl font-bold text-ardosia">{d.valor}</dd>
+              <dt class="text-sm text-cinza">{d.rotulo}</dt>
+            </div>
+          ))
+        }
+      </dl>
+      <Button href={whats} data-whatsapp><Icon nome="mensagem" class="size-4" />Fale comigo</Button>
+    </div>
+  </div>
+</section>

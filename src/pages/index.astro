@@ -1,9 +1,36 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsappFlutuante from '../components/WhatsappFlutuante.astro';
+import Hero from '../components/secoes/Hero.astro';
+import Jornadas from '../components/secoes/Jornadas.astro';
+import ComoFunciona from '../components/secoes/ComoFunciona.astro';
+import Riscos from '../components/secoes/Riscos.astro';
+import SimuladorSecao from '../components/secoes/SimuladorSecao.astro';
+import Cases from '../components/secoes/Cases.astro';
+import Atendimento from '../components/secoes/Atendimento.astro';
+import Sobre from '../components/secoes/Sobre.astro';
+import Depoimentos from '../components/secoes/Depoimentos.astro';
+import Faq from '../components/secoes/Faq.astro';
+import CtaFinal from '../components/secoes/CtaFinal.astro';
 ---
 
 <BaseLayout>
+  <Header />
   <main>
-    <h1>Marcelo Lima — em construção</h1>
+    <Hero />
+    <Jornadas />
+    <ComoFunciona />
+    <Riscos />
+    <SimuladorSecao />
+    <Cases />
+    <Atendimento />
+    <Sobre />
+    <Depoimentos />
+    <Faq />
+    <CtaFinal />
   </main>
+  <Footer />
+  <WhatsappFlutuante />
 </BaseLayout>

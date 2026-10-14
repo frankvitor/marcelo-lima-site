@@ -1,0 +1,14 @@
+---
+import TituloMoldura from '../TituloMoldura.astro';
+import { simulador } from '../../data/home';
+---
+
+<section id="simulador" class="scroll-mt-24 py-16 sm:py-24">
+  <div class="mx-auto max-w-6xl px-5">
+    <div class="reveal mb-10 flex flex-col gap-4">
+      <TituloMoldura titulo={simulador.titulo} />
+      <p class="max-w-2xl text-cinza">{simulador.intro}</p>
+    </div>
+    <div class="rounded-card bg-prata/60 p-6 text-cinza sm:p-10">Simulador (Etapa 4)</div>
+  </div>
+</section>

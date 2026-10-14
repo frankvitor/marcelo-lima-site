@@ -8,14 +8,21 @@ interface Item {
 }
 interface Props {
   itens: Item[];
+  /** 'linha': 1 coluna no mobile e 3 colunas a partir de sm (ideal para 3 itens com valores longos). */
+  layout?: 'grade' | 'linha';
 }
-const { itens } = Astro.props;
+const { itens, layout = 'grade' } = Astro.props;
+
+const grade =
+  'grid-cols-2 sm:grid-cols-3 [&>div:not(:nth-child(-n+2))]:border-t sm:[&>div:not(:nth-child(-n+3))]:border-t sm:[&>div:not(:nth-child(3n+1))]:border-l';
+const linha =
+  'grid-cols-1 sm:grid-cols-3 [&>div:not(:first-child)]:border-t sm:[&>div:not(:first-child)]:border-t-0 sm:[&>div:not(:first-child)]:border-l';
 ---
 
-<dl class="grid grid-cols-2 sm:grid-cols-3">
+<dl class={`grid ${layout === 'linha' ? linha : grade}`}>
   {
     itens.map((i) => (
-      <div class="flex flex-col items-center gap-1 border-linha px-4 py-4 text-center [&:not(:nth-child(-n+2))]:border-t sm:[&:not(:nth-child(-n+3))]:border-t sm:[&:not(:nth-child(3n+1))]:border-l">
+      <div class="flex flex-col items-center gap-1 border-linha px-4 py-4 text-center">
         <Icon nome={i.icone} class="size-7 text-ardosia" />
         <dd class="font-titulo text-xl font-bold text-grafite">{i.valor}</dd>
         <dt class="text-sm text-cinza">{i.rotulo}</dt>

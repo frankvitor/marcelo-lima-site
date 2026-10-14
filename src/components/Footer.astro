@@ -1,0 +1,45 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { site } from '../config/site';
+import { nav, rodape } from '../data/home';
+import { linkWhatsapp } from '../lib/whatsapp';
+
+const ano = new Date().getFullYear();
+const redes = Object.entries(site.redes);
+---
+
+<footer class="bg-ardosia text-prata">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.3fr_1fr_1fr]">
+    <div class="flex flex-col gap-4">
+      <Logo variante="negativa" class="h-12 w-auto self-start" />
+      <p class="max-w-sm text-sm">{rodape.aviso}</p>
+    </div>
+
+    <nav aria-label="Rodapé">
+      <p class="mb-3 font-titulo text-sm font-semibold text-branco">Navegação</p>
+      <ul class="flex flex-col gap-2 text-sm">
+        {nav.map((i) => <li><a href={`/${i.href}`} class="hover:text-branco">{i.rotulo}</a></li>)}
+        <li><a href="/politica-de-privacidade" class="hover:text-branco">Política de privacidade</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <p class="mb-3 font-titulo text-sm font-semibold text-branco">Contato</p>
+      <ul class="flex flex-col gap-2 text-sm">
+        <li>
+          <a href={linkWhatsapp()} class="inline-flex items-center gap-2 hover:text-branco" data-whatsapp>
+            <Icon nome="mensagem" class="size-4" /> WhatsApp: {site.whatsapp}
+          </a>
+        </li>
+        <li>E-mail: {site.email}</li>
+        {redes.map(([nome, valor]) => <li class="capitalize">{nome}: {valor}</li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <p class="mx-auto max-w-6xl px-5 py-5 text-xs">
+      © {ano} {site.nome} · CNPJ {site.cnpj}
+    </p>
+  </div>
+</footer>

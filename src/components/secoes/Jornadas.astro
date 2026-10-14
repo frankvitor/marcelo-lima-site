@@ -1,0 +1,32 @@
+---
+import Button from '../Button.astro';
+import Icon from '../Icon.astro';
+import TituloMoldura from '../TituloMoldura.astro';
+import { jornadas } from '../../data/home';
+---
+
+<section id="servicos" class="scroll-mt-24 py-16 sm:py-24">
+  <div class="mx-auto max-w-6xl px-5">
+    <div class="reveal mb-10 flex flex-col gap-4">
+      <TituloMoldura titulo="Como posso ajudar você?" />
+      <p class="max-w-2xl text-cinza">Escolha o ponto em que você está. Eu adapto o acompanhamento.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {
+        jornadas.map((j, i) => (
+          <article class="reveal flex flex-col gap-4 rounded-card bg-branco p-7 shadow-card" style={`transition-delay:${i * 80}ms`}>
+            <span class="grid size-14 place-items-center rounded-full bg-ambar text-ardosia">
+              <Icon nome={j.icone} class="size-7" />
+            </span>
+            <p class="font-titulo text-xs font-semibold uppercase tracking-widest text-cinza">{j.servico}</p>
+            <h3 class="text-2xl leading-tight text-ardosia">{j.titulo}</h3>
+            <p class="text-cinza">{j.texto}</p>
+            <Button variante="secundario" class="mt-auto self-start" data-quiz data-jornada={j.id}>
+              {j.cta} <Icon nome="seta" class="size-4" />
+            </Button>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

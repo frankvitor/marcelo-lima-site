@@ -1,0 +1,48 @@
+---
+import { estados, estadosAtendidos } from '../data/estados';
+
+const tam = 52;
+const gap = 6;
+const passo = tam + gap;
+const colunas = Math.max(...estados.map((e) => e.col)) + 1;
+const linhas = Math.max(...estados.map((e) => e.lin)) + 1;
+const largura = colunas * passo - gap;
+const altura = linhas * passo - gap;
+---
+
+<figure class="mx-auto w-full max-w-md">
+  <svg
+    viewBox={`0 0 ${largura} ${altura}`}
+    role="img"
+    aria-label="Mapa esquemático do Brasil com os estados atendidos em destaque"
+    class="h-auto w-full"
+  >
+    {
+      estados.map((e) => {
+        const ativo = estadosAtendidos.includes(e.uf);
+        return (
+          <g transform={`translate(${e.col * passo} ${e.lin * passo})`}>
+            <title>{`${e.nome}${ativo ? ' — atendido' : ''}`}</title>
+            <rect
+              width={tam}
+              height={tam}
+              rx="12"
+              fill={ativo ? '#2F313D' : '#E3E4E7'}
+              stroke={ativo ? '#2F313D' : '#C9C9C9'}
+            />
+            <text
+              x={tam / 2}
+              y={tam / 2 + 5}
+              text-anchor="middle"
+              font-family="Lexend, sans-serif"
+              font-weight="600"
+              font-size="15"
+              fill={ativo ? '#FECA53' : '#6B6C6D'}>{e.uf}</text
+            >
+          </g>
+        );
+      })
+    }
+  </svg>
+  <figcaption class="mt-3 text-center text-xs text-cinza">Mapa esquemático · um bloco por estado</figcaption>
+</figure>
