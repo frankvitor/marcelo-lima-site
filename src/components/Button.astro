@@ -9,10 +9,10 @@ const { href, variante = 'primario', class: classe = '', ...resto } = Astro.prop
 const base =
   'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-titulo text-sm font-bold tracking-wide transition-colors duration-200 cursor-pointer';
 const variantes = {
-  primario: 'bg-terra-700 text-branco hover:bg-terra-900',
-  secundario: 'bg-terra-50 text-terra-700 hover:bg-linha',
-  claro: 'bg-branco text-terra-700 hover:bg-terra-50',
-  contorno: 'border-2 border-terra-700 text-terra-700 hover:bg-terra-700 hover:text-branco',
+  primario: 'bg-laranja text-preto hover:bg-ambar',
+  secundario: 'bg-ardosia text-branco hover:bg-preto',
+  claro: 'bg-branco text-ardosia hover:bg-claro',
+  contorno: 'border-2 border-ardosia text-ardosia hover:bg-ardosia hover:text-branco',
 };
 const Tag = href ? 'a' : 'button';
 ---

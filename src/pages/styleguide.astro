@@ -11,24 +11,13 @@ import Icon from '../components/Icon.astro';
 import predio from '../assets/img/predio-placeholder.svg';
 
 const cores = [
-  { nome: 'terra-900', hex: '#2F2A26', uso: 'Rodapé, fundos profundos', escuro: true },
-  { nome: 'terra-700', hex: '#4A423B', uso: 'Primária: botões, pílulas', escuro: true },
-  { nome: 'terra-500', hex: '#6E6258', uso: 'Hover, detalhes', escuro: true },
-  { nome: 'bronze', hex: '#8C6A45', uso: 'Acento: filetes, ícones', escuro: true },
-  { nome: 'bronze-claro', hex: '#C9A97F', uso: 'Acento sobre fundo escuro', escuro: false },
-  { nome: 'areia', hex: '#E6DDD0', uso: 'Seções de destaque', escuro: false },
-  { nome: 'terra-50', hex: '#F1ECE5', uso: 'Fundos tintados', escuro: false },
-  { nome: 'grafite', hex: '#26231F', uso: 'Texto principal', escuro: true },
-  { nome: 'cinza', hex: '#6A635A', uso: 'Texto secundário', escuro: true },
-  { nome: 'linha', hex: '#DDD5C9', uso: 'Bordas e divisores', escuro: false },
-  { nome: 'off-white', hex: '#F8F5F0', uso: 'Fundo base', escuro: false },
-  { nome: 'branco', hex: '#FFFFFF', uso: 'Cards', escuro: false },
+{ nome: 'laranja', hex: '#FF7A00', uso: 'Primária: botões, pílulas, destaques', escuro: false },  { nome: 'ambar', hex: '#FECA53', uso: 'Acento secundário, duotone', escuro: false },  { nome: 'ardosia', hex: '#2F313D', uso: 'Cabeçalho, rodapé, seções escuras', escuro: true },  { nome: 'preto', hex: '#010101', uso: 'Texto sobre laranja, contraste máximo', escuro: true },  { nome: 'cinza', hex: '#6B6C6D', uso: 'Texto secundário', escuro: true },  { nome: 'prata', hex: '#C9C9C9', uso: 'Seções de destaque, divisores', escuro: false },  { nome: 'gelo', hex: '#EDEEF0', uso: 'Fundo base', escuro: false },  { nome: 'branco', hex: '#FFFFFF', uso: 'Cards', escuro: false },
 ];
 ---
 
 <BaseLayout title="Styleguide · Marcelo Lima" noindex>
   <main>
-    <header class="bg-terra-900 px-5 py-10 text-branco">
+    <header class="bg-ardosia px-5 py-10 text-branco">
       <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4">
         <Logo variante="negativa" class="h-12 w-auto" />
         <Pill tom="branca">Styleguide · provisório · noindex</Pill>
@@ -43,10 +32,10 @@ const cores = [
           <div class="flex items-center justify-center rounded-card border border-linha bg-branco p-8">
             <Logo variante="horizontal" class="h-16 w-auto" />
           </div>
-          <div class="flex items-center justify-center rounded-card bg-terra-700 p-8">
+          <div class="flex items-center justify-center rounded-card bg-ardosia p-8">
             <Logo variante="negativa" class="h-16 w-auto" />
           </div>
-          <div class="flex items-center justify-center gap-6 rounded-card border border-linha bg-terra-50 p-8">
+          <div class="flex items-center justify-center gap-6 rounded-card border border-linha bg-claro p-8">
             <Logo variante="monograma" class="h-20 w-auto" />
             <Logo variante="monograma" class="h-12 w-auto" />
             <Logo variante="monograma" class="h-8 w-auto" />
@@ -83,7 +72,7 @@ const cores = [
         <div class="grid gap-8 rounded-card bg-branco p-8 shadow-card md:grid-cols-2">
           <div class="flex flex-col gap-4">
             <p class="text-sm font-medium text-cinza">Sora 800 · caixa-alta · títulos</p>
-            <h1 class="text-4xl text-terra-700 sm:text-5xl">Compre com segurança, do edital às chaves</h1>
+            <h1 class="text-4xl text-ardosia sm:text-5xl">Compre com segurança, do edital às chaves</h1>
             <h2 class="text-2xl">Riscos que eu evito por você</h2>
             <h3 class="text-lg normal-case">Análise de matrícula</h3>
           </div>
@@ -108,7 +97,7 @@ const cores = [
             <Button variante="secundario">Saiba mais</Button>
             <Button variante="contorno">Falar no WhatsApp <Icon nome="seta" class="size-4" /></Button>
           </div>
-          <div class="flex flex-wrap items-center gap-4 rounded-card bg-terra-700 p-6">
+          <div class="flex flex-wrap items-center gap-4 rounded-card bg-ardosia p-6">
             <Button variante="claro">Botão claro sobre fundo escuro</Button>
             <Pill tom="branca">Atendemos todo o Brasil · 100% online</Pill>
           </div>
@@ -123,12 +112,12 @@ const cores = [
       <!-- Cards -->
       <section class="flex flex-col gap-6">
         <TituloMoldura titulo="Cards" />
-        <div class="grid gap-6 rounded-card bg-areia p-6 sm:p-10 md:grid-cols-3">
+        <div class="grid gap-6 rounded-card bg-prata p-6 sm:p-10 md:grid-cols-3">
           {
             ['Quero arrematar um imóvel', 'Já encontrei um imóvel', 'Já arrematei e preciso de ajuda'].map(
               (t, i) => (
                 <article class="flex flex-col gap-4 rounded-card bg-branco p-6 shadow-card">
-                  <span class="font-titulo text-sm font-bold text-bronze">0{i + 1}</span>
+                  <span class="font-titulo text-sm font-bold text-cinza">0{i + 1}</span>
                   <h3 class="text-xl text-grafite">{t}</h3>
                   <p class="text-cinza">Texto de apoio curto explicando a jornada, sem juridiquês.</p>
                   <Button variante="secundario" class="mt-auto self-start">
@@ -139,8 +128,8 @@ const cores = [
             )
           }
         </div>
-        <article class="rounded-card bg-terra-50 p-6">
-          <p class="font-titulo font-bold text-terra-700">Card de apoio (fundo terra-50)</p>
+        <article class="rounded-card bg-claro p-6">
+          <p class="font-titulo font-bold text-ardosia">Card de apoio (fundo claro)</p>
           <p class="text-cinza">Usado para avisos, observações e conteúdo secundário.</p>
         </article>
       </section>
@@ -150,7 +139,7 @@ const cores = [
         <TituloMoldura titulo="Moldura de título" />
         <div class="flex flex-wrap items-start gap-6">
           <TituloMoldura titulo="Como funciona" />
-          <div class="rounded-card bg-terra-700 p-6">
+          <div class="rounded-card bg-ardosia p-6">
             <TituloMoldura titulo="Riscos que eu evito" claro />
           </div>
         </div>
@@ -196,9 +185,9 @@ const cores = [
     </div>
 
     <!-- Arco divisor -->
-    <section class="bg-terra-900 pt-16 text-center text-branco">
+    <section class="bg-ardosia pt-16 text-center text-branco">
       <div class="mx-auto flex max-w-3xl flex-col items-center gap-5 px-5">
-        <Icon nome="chave" class="size-10 text-bronze-claro" />
+        <Icon nome="chave" class="size-10 text-ambar" />
         <h2 class="text-3xl sm:text-5xl">Arco divisor e chaves</h2>
         <p class="text-branco/85">A seção escura termina num semicírculo branco que leva à próxima.</p>
       </div>

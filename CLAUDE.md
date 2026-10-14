@@ -175,6 +175,10 @@ docs/referencias/      # imagens de referência (não publicar)
 
 ---
 
-## 8. Revisão da identidade visual (decisão do cliente)
+## 8. Revisão da identidade visual (decisão do cliente — substitui a paleta vinho da seção 3)
 
-Após ver o styleguide, o cliente pediu paleta **mais clara, em tons de cinza/bege**, e um logo mais elaborado. Isto **substitui a paleta vinho da seção 3**: onde o briefing diz "vinho", leia "terra" (marrom-acinzentado `terra-700` `#4A423B` como primária, `terra-900` `#2F2A26` para fundos profundos), com `bronze` `#8C6A45` / `bronze-claro` `#C9A97F` como acento, `areia` `#E6DDD0` para seções de destaque e `off-white` `#F8F5F0` como base. Valores definitivos em `src/styles/global.css` (`@theme`). Duotone passa a ser em areia (claro). Logo: brasão em arco (porta) com "ML" e fechadura, wordmark MARCELO LIMA em caixa-alta espaçada. As demais regras (formas, tipografia, estrutura) seguem valendo.
+O cliente rejeitou o vinho e, depois, o bege, e passou uma paleta própria. **Paleta vigente** (definitiva em `src/styles/global.css`, `@theme`): `laranja` `#FF7A00` (primária: botões, pílulas), `ambar` `#FECA53` (acento, duotone), `ardosia` `#2F313D` (cabeçalho, rodapé, seções escuras), `preto` `#010101`, `cinza` `#6B6C6D` (texto secundário), `prata` `#C9C9C9` (seções de destaque), `gelo` `#EDEEF0` (fundo base), `branco`. Onde o briefing diz "vinho", leia "laranja" (destaques) ou "ardosia" (fundos escuros).
+
+Regras de contraste: texto sobre laranja é **preto** (branco não passa AA); laranja não serve como cor de texto sobre fundo claro. Duotone das fotos em âmbar.
+
+Logo: emblema geométrico em arco (porta) dividido em quatro partes, com estrela de quatro pontas ao centro, em degradê laranja→âmbar; wordmark "Marcelo Lima" em Sora 800 e linha "ASSESSORIA EM LEILÕES DE IMÓVEIS" em caixa-alta espaçada. Referência de estilo: logo geométrico com emblema + nome em sans geométrica. Formas, tipografia e estrutura da seção 3 seguem valendo.

@@ -5,17 +5,17 @@
 @import '@fontsource/dm-sans/500.css';
 
 @theme {
-  --color-terra-900: #2f2a26;
-  --color-terra-700: #4a423b;
-  --color-terra-500: #6e6258;
-  --color-terra-50: #f1ece5;
-  --color-grafite: #26231f;
-  --color-areia: #e6ddd0;
-  --color-bronze: #8c6a45;
-  --color-bronze-claro: #c9a97f;
-  --color-cinza: #6a635a;
-  --color-linha: #ddd5c9;
-  --color-off-white: #f8f5f0;
+  --color-preto: #010101;
+  --color-ardosia: #2f313d;
+  --color-cinza: #6b6c6d;
+  --color-prata: #c9c9c9;
+  --color-linha: #d6d7da;
+  --color-gelo: #edeef0;
+  --color-claro: #f7f7f8;
+  --color-laranja: #ff7a00;
+  --color-ambar: #feca53;
+  --color-grafite: #1a1b21;
+  --color-off-white: #edeef0;
   --color-branco: #ffffff;
 
   --font-titulo: 'Sora', ui-sans-serif, system-ui, sans-serif;
@@ -24,7 +24,7 @@
   --radius-card: 24px;
   --radius-moldura: 16px;
 
-  --shadow-card: 0 10px 30px -8px rgb(47 42 38 / 0.18), 0 2px 6px rgb(47 42 38 / 0.06);
+  --shadow-card: 0 10px 30px -8px rgb(47 49 61 / 0.18), 0 2px 6px rgb(47 49 61 / 0.06);
 }
 
 @layer base {
@@ -52,7 +52,7 @@
     letter-spacing: -0.01em;
   }
   :focus-visible {
-    outline: 3px solid var(--color-terra-500);
+    outline: 3px solid var(--color-ardosia);
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -77,10 +77,10 @@
   letter-spacing: -0.015em;
 }
 
-/* Foto em duotone: imagem em tons de cinza multiplicada sobre areia (duotone claro) */
+/* Foto em duotone: imagem em tons de cinza multiplicada sobre âmbar (duotone claro) */
 .duotone {
   position: relative;
-  background: #cdbfad;
+  background: var(--color-ambar);
   overflow: hidden;
   isolation: isolate;
 }
@@ -96,6 +96,6 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgb(74 66 59 / 0.45), transparent 65%);
+  background: linear-gradient(to top, rgb(47 49 61 / 0.5), transparent 65%);
   pointer-events: none;
 }

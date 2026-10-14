@@ -1,10 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 72" role="img" aria-label="Marcelo Lima — Assessoria em Leilões de Imóveis">
-  <path d="M1 70V28a25 25 0 0 1 50 0v42z" fill="none" stroke="#8C6A45" stroke-width="1.4"/>
-  <path d="M5 66V28a21 21 0 0 1 42 0v38z" fill="#4A423B"/>
-  <text x="26" y="35" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5" fill="#fff">ML</text>
-  <circle cx="26" cy="49" r="3.4" fill="#C9A97F"/>
-  <path d="M24.6 51.5 23.4 60h5.2l-1.2-8.5z" fill="#C9A97F"/>
-  <text x="68" y="33" font-family="Sora, sans-serif" font-weight="800" font-size="22" letter-spacing="1.6" fill="#26231F">MARCELO LIMA</text>
-  <path d="M68 42h44" stroke="#8C6A45" stroke-width="1.5"/>
-  <text x="68" y="58" font-family="DM Sans, sans-serif" font-weight="500" font-size="9.5" letter-spacing="2.1" fill="#6A635A">ASSESSORIA EM LEILÕES DE IMÓVEIS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364 72" role="img" aria-label="Marcelo Lima — Assessoria em Leilões de Imóveis">
+  <defs>
+    <linearGradient id="gh" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#FF7A00"/><stop offset="1" stop-color="#FECA53"/></linearGradient>
+    <mask id="mh">
+      <path d="M2 70V32a30 30 0 0 1 60 0v38z" fill="#fff"/>
+      <rect x="30.5" y="0" width="3" height="72" fill="#000"/>
+      <rect x="0" y="42.5" width="64" height="3" fill="#000"/>
+      <circle cx="32" cy="44" r="12" fill="#000"/>
+    </mask>
+  </defs>
+  <path d="M2 70V32a30 30 0 0 1 60 0v38z" fill="url(#gh)" mask="url(#mh)"/>
+  <path d="M32 33.5Q33.2 42.8 42.5 44Q33.2 45.2 32 54.5Q30.8 45.2 21.5 44Q30.8 42.8 32 33.5z" fill="#2F313D"/>
+  <text x="80" y="38" font-family="Sora, sans-serif" font-weight="800" font-size="27" letter-spacing="-0.3" fill="#2F313D">Marcelo Lima</text>
+  <text x="81" y="58" font-family="Sora, sans-serif" font-weight="600" font-size="8.6" letter-spacing="2.3" fill="#FF7A00">ASSESSORIA EM LEILÕES DE IMÓVEIS</text>
 </svg>
