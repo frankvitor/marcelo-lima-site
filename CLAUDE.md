@@ -172,3 +172,9 @@ docs/referencias/      # imagens de referência (não publicar)
 - Ao terminar cada etapa, rode `npm run build` e confira que não há erros.
 - Mantenha uma lista de pendências de conteúdo em `docs/PENDENCIAS.md` (tudo que for `[PREENCHER]`).
 - Na dúvida sobre texto que envolva questão jurídica ou promessa, escolha a versão mais conservadora e sinalize.
+
+---
+
+## 8. Revisão da identidade visual (decisão do cliente)
+
+Após ver o styleguide, o cliente pediu paleta **mais clara, em tons de cinza/bege**, e um logo mais elaborado. Isto **substitui a paleta vinho da seção 3**: onde o briefing diz "vinho", leia "terra" (marrom-acinzentado `terra-700` `#4A423B` como primária, `terra-900` `#2F2A26` para fundos profundos), com `bronze` `#8C6A45` / `bronze-claro` `#C9A97F` como acento, `areia` `#E6DDD0` para seções de destaque e `off-white` `#F8F5F0` como base. Valores definitivos em `src/styles/global.css` (`@theme`). Duotone passa a ser em areia (claro). Logo: brasão em arco (porta) com "ML" e fechadura, wordmark MARCELO LIMA em caixa-alta espaçada. As demais regras (formas, tipografia, estrutura) seguem valendo.

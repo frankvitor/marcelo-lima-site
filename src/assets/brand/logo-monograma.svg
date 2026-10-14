@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Marcelo Lima">
-  <circle cx="32" cy="32" r="32" fill="#A3123A"/>
-  <text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="Sora, sans-serif" font-weight="800" font-size="26" letter-spacing="-1" fill="#fff">ML</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 72" role="img" aria-label="Marcelo Lima">
+  <path d="M1 70V28a25 25 0 0 1 50 0v42z" fill="none" stroke="#8C6A45" stroke-width="1.4"/>
+  <path d="M5 66V28a21 21 0 0 1 42 0v38z" fill="#4A423B"/>
+  <text x="26" y="35" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5" fill="#fff">ML</text>
+  <circle cx="26" cy="49" r="3.4" fill="#C9A97F"/>
+  <path d="M24.6 51.5 23.4 60h5.2l-1.2-8.5z" fill="#C9A97F"/>
 </svg>
