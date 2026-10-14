@@ -1,5 +1,5 @@
 [
-  { "id": "exemplo-1", "ordem": 1, "tipo": "Apartamento", "cidade": "[PREENCHER]", "uf": "[UF]", "avaliacao": "[PREENCHER]", "arrematado": "[PREENCHER]", "custoTotal": "[PREENCHER]", "descontoReal": "[PREENCHER]", "prazo": "[PREENCHER]", "exemplo": true },
-  { "id": "exemplo-2", "ordem": 2, "tipo": "Casa", "cidade": "[PREENCHER]", "uf": "[UF]", "avaliacao": "[PREENCHER]", "arrematado": "[PREENCHER]", "custoTotal": "[PREENCHER]", "descontoReal": "[PREENCHER]", "prazo": "[PREENCHER]", "exemplo": true },
-  { "id": "exemplo-3", "ordem": 3, "tipo": "Imóvel comercial", "cidade": "[PREENCHER]", "uf": "[UF]", "avaliacao": "[PREENCHER]", "arrematado": "[PREENCHER]", "custoTotal": "[PREENCHER]", "descontoReal": "[PREENCHER]", "prazo": "[PREENCHER]", "exemplo": true }
+  { "id": "exemplo-1", "ordem": 1, "tipo": "Apartamento", "cidade": "Campinas", "uf": "SP", "avaliacao": "R$ 420.000", "arrematado": "R$ 252.000", "custoTotal": "R$ 294.660", "descontoReal": "29,8%", "prazo": "7 meses", "exemplo": true },
+  { "id": "exemplo-2", "ordem": 2, "tipo": "Casa", "cidade": "Curitiba", "uf": "PR", "avaliacao": "R$ 650.000", "arrematado": "R$ 455.000", "custoTotal": "R$ 522.400", "descontoReal": "19,6%", "prazo": "10 meses", "exemplo": true },
+  { "id": "exemplo-3", "ordem": 3, "tipo": "Imóvel comercial", "cidade": "Belo Horizonte", "uf": "MG", "avaliacao": "R$ 380.000", "arrematado": "R$ 228.000", "custoTotal": "R$ 267.540", "descontoReal": "29,6%", "prazo": "5 meses", "exemplo": true }
 ]

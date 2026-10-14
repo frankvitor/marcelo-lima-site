@@ -18,7 +18,7 @@ Para localizar no código: `grep -rn "PREENCHER" src`.
 
 ## 3. Cases — `src/content/cases.json`
 - [ ] Casos reais, com autorização do cliente: tipo de imóvel, cidade/UF, valor de avaliação, valor arrematado, custo total, desconto real e prazo até as chaves
-- [ ] Trocar os 3 exemplos ilustrativos (`"exemplo": true`) pelos casos reais
+- [ ] Trocar os 3 exemplos por casos reais. Hoje os cases têm dados FICTÍCIOS (a pedido do cliente, para demonstração) e aparecem com o aviso "Exemplo ilustrativo". Antes de publicar, substituir ou remover, e só tirar o aviso (`"exemplo": false`) com casos reais
 
 ## 4. Depoimentos — `src/content/depoimentos.json`
 - [ ] Depoimentos reais (nome, cidade e texto, com autorização). Enquanto a lista estiver vazia, a seção não aparece.
