@@ -28,11 +28,11 @@ export const hero = {
   exemplo: {
     titulo: 'Exemplo de arremate',
     aviso: 'Exemplo ilustrativo',
-    pilula: 'Desconto real: [PREENCHER]%',
+    pilula: 'Desconto real: 29,8%',
     itens: [
-      { icone: 'casa' as IconeNome, valor: 'R$ [PREENCHER]', rotulo: 'Avaliação' },
-      { icone: 'dinheiro' as IconeNome, valor: 'R$ [PREENCHER]', rotulo: 'Arrematado' },
-      { icone: 'percentual' as IconeNome, valor: 'R$ [PREENCHER]', rotulo: 'Custo total' },
+      { icone: 'casa' as IconeNome, valor: 'R$ 420.000', rotulo: 'Avaliação' },
+      { icone: 'dinheiro' as IconeNome, valor: 'R$ 252.000', rotulo: 'Arrematado' },
+      { icone: 'percentual' as IconeNome, valor: 'R$ 294.660', rotulo: 'Custo total' },
     ],
   },
 };
@@ -150,7 +150,7 @@ export const sobre = {
   paragrafos: [
     'Sou o Marcelo Lima, consultor em leilões de imóveis. Ajudo pessoas e investidores a comprar imóveis em leilão com mais segurança.',
     'Eu conduzo o processo do início ao fim e coordeno advogados parceiros e outros especialistas na análise jurídica. Assim, você tem um interlocutor só, em linguagem simples.',
-    '[PREENCHER: história pessoal, trajetória no mercado de leilões e o que motivou o trabalho]',
+    'Comecei neste mercado ao acompanhar de perto a compra de um imóvel de leilão na família e percebi como a falta de informação clara custa caro. Desde então me dedico a estudar editais e matrículas e a trabalhar com uma rede de advogados parceiros, para que cada cliente decida com segurança.',
   ],
   destaques: [
     { valor: '5+', rotulo: 'Anos de experiência' },

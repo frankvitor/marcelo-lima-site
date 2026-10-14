@@ -1,7 +1,8 @@
 # Pendências de conteúdo
 
-Tudo que o cliente (Marcelo) precisa enviar ou decidir. Os itens aparecem no site como `[PREENCHER]`.
-Para localizar no código: `grep -rn "PREENCHER" src`.
+> **ATENÇÃO — site em modo demonstração.** A pedido do cliente, todos os campos que estavam como `[PREENCHER]` foram preenchidos com dados **FICTÍCIOS**: WhatsApp (11) 90000-0000, e-mail, CNPJ 00.000.000/0001-00, redes sociais, texto de história do Marcelo, valores do card do hero, os 3 cases, prazo de retenção e data da política de privacidade. **Nada disso pode ir ao ar como real.** Os itens abaixo continuam sendo o que o cliente precisa enviar para substituir os dados fictícios. Ao trocar os contatos em `src/config/site.ts`, mude `demo` para `false` (assim telefone e e-mail passam a entrar no JSON-LD).
+
+Tudo que o cliente (Marcelo) precisa enviar ou decidir. Para localizar os dados fictícios: `src/config/site.ts`, `src/data/home.ts`, `src/content/*.json` e `src/pages/politica-de-privacidade.astro`.
 
 ## 1. Contato e identificação — `src/config/site.ts`
 - [ ] Número de WhatsApp (com DDI e DDD). Enquanto faltar, os botões de WhatsApp apontam para a âncora de contato e o quiz só mostra a mensagem na tela.
