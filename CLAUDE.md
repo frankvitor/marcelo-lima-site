@@ -181,4 +181,4 @@ O cliente rejeitou o vinho e, depois, o bege, e passou uma paleta própria. **Pa
 
 Regras de contraste: texto sobre laranja é **preto** (branco não passa AA); laranja não serve como cor de texto sobre fundo claro. Duotone das fotos em âmbar.
 
-Logo: emblema geométrico em arco (porta) dividido em quatro partes, com estrela de quatro pontas ao centro, em degradê laranja→âmbar; wordmark "Marcelo Lima" em Sora 800 e linha "ASSESSORIA EM LEILÕES DE IMÓVEIS" em caixa-alta espaçada. Referência de estilo: logo geométrico com emblema + nome em sans geométrica. Formas, tipografia e estrutura da seção 3 seguem valendo.
+Logo: emblema geométrico em arco (porta) dividido em quatro partes, com estrela de quatro pontas ao centro, em degradê laranja→âmbar; wordmark "Marcelo Lima" em Lexend 600 e linha "ASSESSORIA EM LEILÕES DE IMÓVEIS" em caixa-alta espaçada. Referência de estilo: logo geométrico com emblema + nome em sans geométrica. **Tipografia vigente: títulos e logo em Lexend (600–700), texto em DM Sans (400–500)** — substitui a Sora da seção 3. Formas e estrutura seguem valendo.

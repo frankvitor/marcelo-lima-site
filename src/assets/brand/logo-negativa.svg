@@ -10,6 +10,6 @@
   </defs>
   <path d="M2 70V32a30 30 0 0 1 60 0v38z" fill="url(#gn)" mask="url(#mn)"/>
   <path d="M32 33.5Q33.2 42.8 42.5 44Q33.2 45.2 32 54.5Q30.8 45.2 21.5 44Q30.8 42.8 32 33.5z" fill="#FFFFFF"/>
-  <text x="80" y="38" font-family="Sora, sans-serif" font-weight="800" font-size="27" letter-spacing="-0.3" fill="#FFFFFF">Marcelo Lima</text>
-  <text x="81" y="58" font-family="Sora, sans-serif" font-weight="600" font-size="8.6" letter-spacing="2.3" fill="#FECA53">ASSESSORIA EM LEILÕES DE IMÓVEIS</text>
+  <text x="80" y="38" font-family="Lexend, sans-serif" font-weight="600" font-size="27" letter-spacing="-0.2" fill="#FFFFFF">Marcelo Lima</text>
+  <text x="81" y="58" font-family="Lexend, sans-serif" font-weight="500" font-size="8.2" letter-spacing="2.2" fill="#FECA53">ASSESSORIA EM LEILÕES DE IMÓVEIS</text>
 </svg>

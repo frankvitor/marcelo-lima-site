@@ -9,7 +9,7 @@ interface Props {
 }
 const { variante = 'horizontal', class: classe = 'h-12 w-auto' } = Astro.props;
 const svgs = { horizontal, negativa, monograma };
-// Inline para herdar as fontes da página (Sora / DM Sans).
+// Inline para herdar as fontes da página (Lexend / DM Sans).
 const svg = svgs[variante].replace('<svg ', `<svg class="${classe}" `);
 ---
 
