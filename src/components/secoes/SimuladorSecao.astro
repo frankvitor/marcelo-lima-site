@@ -1,5 +1,6 @@
 ---
 import TituloMoldura from '../TituloMoldura.astro';
+import Simulador from '../islands/Simulador';
 import { simulador } from '../../data/home';
 ---
 
@@ -9,6 +10,6 @@ import { simulador } from '../../data/home';
       <TituloMoldura titulo={simulador.titulo} />
       <p class="max-w-2xl text-cinza">{simulador.intro}</p>
     </div>
-    <div class="rounded-card bg-prata/60 p-6 text-cinza sm:p-10">Simulador (Etapa 4)</div>
+    <Simulador client:visible />
   </div>
 </section>

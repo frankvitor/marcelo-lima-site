@@ -14,6 +14,7 @@ import Sobre from '../components/secoes/Sobre.astro';
 import Depoimentos from '../components/secoes/Depoimentos.astro';
 import Faq from '../components/secoes/Faq.astro';
 import CtaFinal from '../components/secoes/CtaFinal.astro';
+import Quiz from '../components/islands/Quiz';
 ---
 
 <BaseLayout>
@@ -33,4 +34,5 @@ import CtaFinal from '../components/secoes/CtaFinal.astro';
   </main>
   <Footer />
   <WhatsappFlutuante />
+  <Quiz client:idle />
 </BaseLayout>
