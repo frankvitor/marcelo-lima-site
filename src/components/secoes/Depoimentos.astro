@@ -16,9 +16,9 @@ const lista = (await getCollection('depoimentos')).sort((a, b) => a.data.ordem -
         <div class="grid gap-6 md:grid-cols-3">
           {lista.map(({ data: d }) => (
             <figure class="reveal flex flex-col gap-4 rounded-card bg-branco p-6 shadow-card">
-              <blockquote class="text-ardosia">“{d.texto}”</blockquote>
+              <blockquote class="text-marinho-900">“{d.texto}”</blockquote>
               <figcaption class="mt-auto text-sm text-cinza">
-                <strong class="font-titulo text-ardosia">{d.nome}</strong>
+                <strong class="font-titulo text-marinho-900">{d.nome}</strong>
                 {d.cidade && <span> · {d.cidade}</span>}
               </figcaption>
             </figure>

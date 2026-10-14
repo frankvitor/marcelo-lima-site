@@ -1,29 +1,72 @@
 ---
+import { Picture } from 'astro:assets';
 import Button from '../Button.astro';
 import Icon from '../Icon.astro';
-import TituloMoldura from '../TituloMoldura.astro';
-import { jornadas } from '../../data/home';
+import Pill from '../Pill.astro';
+import TituloSecao from '../TituloSecao.astro';
+import { jornadas, jornadasSecao } from '../../data/home';
+import chaves from '../../assets/img/fotos/jornada-entrega-das-chaves.jpg';
+import documentos from '../../assets/img/fotos/jornada-analise-documentos.jpg';
+import fechadura from '../../assets/img/fotos/jornada-chave-na-fechadura.jpg';
+
+const fotos = {
+  'assessoria-completa': { src: chaves, alt: 'Mão segurando um molho de chaves na entrada de um imóvel' },
+  'consultoria-pontual': { src: documentos, alt: 'Duas pessoas analisando documentos sobre uma mesa' },
+  'pos-arrematacao': { src: fechadura, alt: 'Chave na fechadura de uma porta' },
+};
 ---
 
-<section id="servicos" class="scroll-mt-24 py-16 sm:py-24">
-  <div class="mx-auto max-w-6xl px-5">
-    <div class="reveal mb-10 flex flex-col gap-4">
-      <TituloMoldura titulo="Como posso ajudar você?" />
-      <p class="max-w-2xl text-cinza">Escolha o ponto em que você está. Eu adapto o acompanhamento.</p>
+<section id="servicos" class="scroll-mt-20 bg-claro py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="reveal mb-12">
+      <TituloSecao eyebrow={jornadasSecao.eyebrow} titulo={jornadasSecao.titulo} intro={jornadasSecao.intro} centro />
     </div>
-    <div class="grid gap-6 md:grid-cols-3">
+    <div class="grid gap-6 lg:grid-cols-3">
       {
         jornadas.map((j, i) => (
-          <article class="reveal flex flex-col gap-4 rounded-card bg-branco p-7 shadow-card" style={`transition-delay:${i * 80}ms`}>
-            <span class="grid size-14 place-items-center rounded-full bg-ambar text-ardosia">
-              <Icon nome={j.icone} class="size-7" />
-            </span>
-            <p class="font-titulo text-xs font-semibold uppercase tracking-widest text-cinza">{j.servico}</p>
-            <h3 class="text-2xl leading-tight text-ardosia">{j.titulo}</h3>
-            <p class="text-cinza">{j.texto}</p>
-            <Button variante="secundario" class="mt-auto self-start" data-quiz data-jornada={j.id}>
-              {j.cta} <Icon nome="seta" class="size-4" />
-            </Button>
+          <article
+            class={`reveal card-hover relative flex flex-col overflow-hidden rounded-card bg-branco shadow-card ${
+              j.destaque ? 'ring-2 ring-vinho' : 'ring-1 ring-linha'
+            }`}
+            style={`transition-delay:${i * 80}ms`}
+          >
+            <div class="relative aspect-[16/10] overflow-hidden bg-marinho-900">
+              <Picture
+                src={fotos[j.id].src}
+                alt={fotos[j.id].alt}
+                widths={[480, 720, 960]}
+                sizes="(min-width: 1024px) 400px, 100vw"
+                formats={['avif', 'webp']}
+                loading="lazy"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-marinho-950/70 via-marinho-900/10 to-transparent" aria-hidden="true" />
+              {j.destaque && <Pill class="absolute left-4 top-4">Acompanhamento completo</Pill>}
+              <p class="absolute inset-x-5 bottom-4 font-titulo text-lg font-bold leading-tight text-branco">{j.rotulo}</p>
+            </div>
+            <div class="flex flex-1 flex-col gap-4 p-6">
+              <div>
+                <p class="mb-1 font-texto text-xs font-semibold uppercase tracking-[0.16em] text-vinho">{j.servico}</p>
+                <h3 class="text-xl text-marinho-900">{j.titulo}</h3>
+              </div>
+              <p class="text-cinza">{j.texto}</p>
+              <ul class="flex flex-col gap-2.5">
+                {j.bullets.map((b) => (
+                  <li class="flex items-start gap-2.5 text-sm text-grafite">
+                    <Icon nome="check" class="mt-0.5 size-4 shrink-0 text-vinho" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+              <Button
+                variante={j.destaque ? 'primario' : 'secundario'}
+                class="mt-auto w-full"
+                data-quiz
+                data-jornada={j.id}
+              >
+                {j.cta} <Icon nome="seta" class="size-4" />
+              </Button>
+            </div>
           </article>
         ))
       }

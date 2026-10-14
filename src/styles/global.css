@@ -1,30 +1,37 @@
 @import 'tailwindcss';
-@import '@fontsource/lexend/600.css';
-@import '@fontsource/lexend/700.css';
-@import '@fontsource/dm-sans/400.css';
-@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/manrope/700.css';
+@import '@fontsource/manrope/800.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
 
 @theme {
-  --color-preto: #010101;
-  --color-ardosia: #2f313d;
-  --color-cinza: #6b6c6d;
-  --color-prata: #c9c9c9;
-  --color-linha: #d6d7da;
-  --color-gelo: #edeef0;
-  --color-claro: #f7f7f8;
-  --color-laranja: #ff7a00;
-  --color-ambar: #feca53;
-  --color-grafite: #1a1b21;
-  --color-off-white: #edeef0;
+  /* Marinho dominante (fundos, header, rodapé) + vinho como único acento */
+  --color-marinho-950: #070b1f;
+  --color-marinho-900: #0e1633;
+  --color-marinho-700: #1b2550;
+  --color-vinho: #a3123a;
+  --color-vinho-500: #c8264f;
+  --color-vinho-50: #fbeff2;
+  --color-rosa: #f3b3c3; /* destaque sobre fundo marinho */
+
+  --color-grafite: #12142b;
+  --color-cinza: #5b6070;
+  --color-prata: #c5cadb; /* texto secundário sobre marinho */
+  --color-linha: #e2e4eb;
+  --color-gelo: #f4f5f8;
+  --color-claro: #fafafb;
+  --color-off-white: #fafafb;
   --color-branco: #ffffff;
 
-  --font-titulo: 'Lexend', ui-sans-serif, system-ui, sans-serif;
-  --font-texto: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-titulo: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-texto: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
-  --radius-card: 24px;
-  --radius-moldura: 16px;
+  --radius-card: 20px;
+  --radius-moldura: 12px;
 
-  --shadow-card: 0 10px 30px -8px rgb(47 49 61 / 0.18), 0 2px 6px rgb(47 49 61 / 0.06);
+  --shadow-card: 0 10px 30px -10px rgb(14 22 51 / 0.2), 0 2px 6px rgb(14 22 51 / 0.06);
+  --shadow-card-hover: 0 22px 40px -14px rgb(14 22 51 / 0.32), 0 4px 10px rgb(14 22 51 / 0.08);
 }
 
 @layer base {
@@ -32,7 +39,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background: var(--color-off-white);
+    background: var(--color-claro);
     color: var(--color-grafite);
     font-family: var(--font-texto);
     font-weight: 400;
@@ -44,15 +51,11 @@
   h4 {
     font-family: var(--font-titulo);
     font-weight: 700;
-    line-height: 1.05;
-  }
-  h1,
-  h2 {
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
   :focus-visible {
-    outline: 3px solid var(--color-ardosia);
+    outline: 3px solid var(--color-vinho-500);
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -69,12 +72,24 @@
   }
 }
 
+/* Título do hero: caixa-alta, extra-bold */
 @utility titulo-display {
   font-family: var(--font-titulo);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   line-height: 1.02;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.012em;
+}
+
+/* Cartão com elevação sutil no hover */
+@utility card-hover {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+  }
 }
 
 /* Animação de entrada: só esconde se o JS estiver ativo */
@@ -96,25 +111,23 @@
   }
 }
 
-/* Foto em duotone: imagem em tons de cinza multiplicada sobre âmbar (duotone claro) */
-.duotone {
-  position: relative;
-  background: var(--color-ambar);
-  overflow: hidden;
-  isolation: isolate;
+/* Faixa contínua (marquee): para com reduced-motion */
+@keyframes rolar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-.duotone > img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(1) contrast(1.15) brightness(1.1);
-  mix-blend-mode: multiply;
+.marquee-trilho {
+  animation: rolar 40s linear infinite;
 }
-.duotone::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgb(47 49 61 / 0.5), transparent 65%);
-  pointer-events: none;
+.marquee:hover .marquee-trilho {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-trilho {
+    animation: none;
+  }
 }

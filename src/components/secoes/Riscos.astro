@@ -5,7 +5,7 @@ import ArcoDivisor from '../ArcoDivisor.astro';
 import { riscos } from '../../data/home';
 ---
 
-<section class="bg-ardosia pt-16 text-branco sm:pt-24">
+<section class="bg-marinho-900 pt-16 text-branco sm:pt-24">
   <div class="mx-auto max-w-6xl px-5">
     <div class="reveal mb-10 flex flex-col gap-4">
       <TituloMoldura titulo={riscos.titulo} claro />
@@ -14,8 +14,8 @@ import { riscos } from '../../data/home';
     <ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {
         riscos.itens.map((r, i) => (
-          <li class="reveal flex gap-4 rounded-card bg-branco p-6 text-ardosia shadow-card" style={`transition-delay:${i * 60}ms`}>
-            <span class="grid size-12 shrink-0 place-items-center rounded-full bg-ambar">
+          <li class="reveal flex gap-4 rounded-card bg-branco p-6 text-marinho-900 shadow-card" style={`transition-delay:${i * 60}ms`}>
+            <span class="grid size-12 shrink-0 place-items-center rounded-full bg-vinho-50">
               <Icon nome={r.icone} class="size-6" />
             </span>
             <div>

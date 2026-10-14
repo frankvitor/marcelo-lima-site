@@ -4,9 +4,9 @@ import { formatarBRL, mascararMoeda, moedaParaNumero } from '../../lib/formatado
 import { abrirQuiz } from '../../lib/quizEvents';
 
 const ficha = 'flex flex-col gap-1.5';
-const rotuloCls = 'text-sm font-medium text-ardosia';
+const rotuloCls = 'text-sm font-medium text-marinho-900';
 const campoCls =
-  'w-full rounded-[var(--radius-moldura)] border border-linha bg-branco px-4 py-3 text-ardosia placeholder:text-cinza/70 focus:border-ardosia';
+  'w-full rounded-[var(--radius-moldura)] border border-linha bg-branco px-4 py-3 text-marinho-900 placeholder:text-cinza/70 focus:border-marinho-900';
 
 function pctParaNumero(texto: string): number {
   const n = Number(texto.replace(',', '.').replace(/[^\d.]/g, ''));
@@ -128,8 +128,8 @@ export default function Simulador() {
             <div class="grid grid-cols-2 gap-3">
               {(['judicial', 'extrajudicial'] as const).map((t) => (
                 <label
-                  class={`cursor-pointer rounded-[var(--radius-moldura)] border px-4 py-3 text-center font-titulo text-sm font-semibold capitalize has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-ardosia ${
-                    tipo === t ? 'border-ardosia bg-ardosia text-branco' : 'border-linha bg-branco text-ardosia'
+                  class={`cursor-pointer rounded-[var(--radius-moldura)] border px-4 py-3 text-center font-titulo text-sm font-semibold capitalize has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-marinho-900 ${
+                    tipo === t ? 'border-marinho-900 bg-marinho-900 text-branco' : 'border-linha bg-branco text-marinho-900'
                   }`}
                 >
                   <input
@@ -160,12 +160,12 @@ export default function Simulador() {
         </div>
       </form>
 
-      <div class="flex flex-col gap-4 rounded-card bg-ardosia p-6 text-branco shadow-card sm:p-8" aria-live="polite">
+      <div class="flex flex-col gap-4 rounded-card bg-marinho-900 p-6 text-branco shadow-card sm:p-8" aria-live="polite">
         {r.pronto ? (
           <>
             <div class="flex flex-wrap items-center justify-between gap-3">
               <p class="font-titulo text-sm font-semibold uppercase tracking-widest text-prata">Desconto real</p>
-              <span class="inline-flex rounded-full bg-laranja px-4 py-1.5 font-titulo text-lg font-bold text-preto">
+              <span class="inline-flex rounded-full bg-vinho px-4 py-1.5 font-titulo text-lg font-bold text-branco">
                 {descontoTexto}
               </span>
             </div>
@@ -176,7 +176,7 @@ export default function Simulador() {
             )}
             <div class="border-y border-white/15 py-4">
               <p class="text-sm text-prata">Custo total da aquisição</p>
-              <p class="font-titulo text-3xl font-bold text-ambar sm:text-4xl">{formatarBRL(r.total)}</p>
+              <p class="font-titulo text-3xl font-bold text-rosa sm:text-4xl">{formatarBRL(r.total)}</p>
             </div>
             <dl class="flex flex-col gap-2 text-sm">
               {r.itens.map((i) => (
@@ -189,7 +189,7 @@ export default function Simulador() {
             <button
               type="button"
               onClick={pedirAnalise}
-              class="mt-2 inline-flex cursor-pointer items-center justify-center rounded-full bg-laranja px-7 py-3.5 font-titulo text-sm font-bold text-preto transition-colors hover:bg-ambar"
+              class="mt-2 inline-flex cursor-pointer items-center justify-center rounded-full bg-vinho px-7 py-3.5 font-titulo text-sm font-bold text-branco transition-colors hover:bg-vinho-500"
             >
               Quero uma análise real deste imóvel
             </button>

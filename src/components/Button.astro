@@ -1,18 +1,19 @@
 ---
 interface Props {
   href?: string;
-  variante?: 'primario' | 'secundario' | 'claro' | 'contorno';
+  variante?: 'primario' | 'secundario' | 'claro' | 'contorno' | 'contornoClaro';
   class?: string;
   [chave: string]: unknown;
 }
 const { href, variante = 'primario', class: classe = '', ...resto } = Astro.props;
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-titulo text-sm font-bold tracking-wide transition-colors duration-200 cursor-pointer';
+  'inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 font-texto text-[0.95rem] font-semibold transition-colors duration-200 cursor-pointer';
 const variantes = {
-  primario: 'bg-laranja text-preto hover:bg-ambar',
-  secundario: 'bg-ardosia text-branco hover:bg-preto',
-  claro: 'bg-branco text-ardosia hover:bg-claro',
-  contorno: 'border-2 border-ardosia text-ardosia hover:bg-ardosia hover:text-branco',
+  primario: 'bg-vinho text-branco hover:bg-vinho-500',
+  secundario: 'bg-marinho-900 text-branco hover:bg-marinho-950',
+  claro: 'bg-branco text-marinho-900 hover:bg-claro',
+  contorno: 'border-2 border-marinho-900 text-marinho-900 hover:bg-marinho-900 hover:text-branco',
+  contornoClaro: 'border-2 border-branco/60 text-branco hover:bg-branco hover:text-marinho-900',
 };
 const Tag = href ? 'a' : 'button';
 ---

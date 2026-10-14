@@ -34,7 +34,7 @@ const vazio: Respostas = {
 };
 
 const campoCls =
-  'w-full rounded-[var(--radius-moldura)] border border-linha bg-branco px-4 py-3 text-ardosia placeholder:text-cinza/70 focus:border-ardosia';
+  'w-full rounded-[var(--radius-moldura)] border border-linha bg-branco px-4 py-3 text-marinho-900 placeholder:text-cinza/70 focus:border-marinho-900';
 
 function Opcoes(props: {
   nome: string;
@@ -46,8 +46,8 @@ function Opcoes(props: {
     <div class="flex flex-col gap-2.5">
       {props.opcoes.map((o) => (
         <label
-          class={`flex cursor-pointer items-center justify-between gap-3 rounded-[var(--radius-moldura)] border px-4 py-3.5 has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-ardosia ${
-            props.valor === o.valor ? 'border-ardosia bg-ardosia text-branco' : 'border-linha bg-branco text-ardosia hover:border-ardosia'
+          class={`flex cursor-pointer items-center justify-between gap-3 rounded-[var(--radius-moldura)] border px-4 py-3.5 has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-marinho-900 ${
+            props.valor === o.valor ? 'border-marinho-900 bg-marinho-900 text-branco' : 'border-linha bg-branco text-marinho-900 hover:border-marinho-900'
           }`}
         >
           <span>
@@ -67,10 +67,10 @@ function Opcoes(props: {
           <span
             aria-hidden="true"
             class={`grid size-5 shrink-0 place-items-center rounded-full border ${
-              props.valor === o.valor ? 'border-ambar bg-ambar' : 'border-prata'
+              props.valor === o.valor ? 'border-rosa bg-vinho-50' : 'border-prata'
             }`}
           >
-            {props.valor === o.valor && <span class="size-2 rounded-full bg-ardosia" />}
+            {props.valor === o.valor && <span class="size-2 rounded-full bg-marinho-900" />}
           </span>
         </label>
       ))}
@@ -231,7 +231,7 @@ export default function Quiz() {
     corpo = (
       <div class="grid gap-4 sm:grid-cols-[110px_1fr]">
         <div>
-          <label for="quiz-uf" class="mb-1.5 block text-sm font-medium text-ardosia">Estado</label>
+          <label for="quiz-uf" class="mb-1.5 block text-sm font-medium text-marinho-900">Estado</label>
           <select id="quiz-uf" class={campoCls} value={r.uf} onChange={(e) => set('uf', (e.target as HTMLSelectElement).value)}>
             <option value="">UF</option>
             {ufs.map((u) => (
@@ -240,7 +240,7 @@ export default function Quiz() {
           </select>
         </div>
         <div>
-          <label for="quiz-cidade" class="mb-1.5 block text-sm font-medium text-ardosia">Cidade de interesse</label>
+          <label for="quiz-cidade" class="mb-1.5 block text-sm font-medium text-marinho-900">Cidade de interesse</label>
           <input id="quiz-cidade" class={campoCls} autocomplete="address-level2" value={r.cidade} onInput={(e) => set('cidade', (e.target as HTMLInputElement).value)} />
         </div>
         <div class="sm:col-span-2">{erro(!valido(2), 'Informe o estado e a cidade.')}</div>
@@ -253,12 +253,12 @@ export default function Quiz() {
     corpo = (
       <div class="flex flex-col gap-4">
         <div>
-          <label for="quiz-nome" class="mb-1.5 block text-sm font-medium text-ardosia">Seu nome</label>
+          <label for="quiz-nome" class="mb-1.5 block text-sm font-medium text-marinho-900">Seu nome</label>
           <input id="quiz-nome" class={campoCls} autocomplete="name" value={r.nome} onInput={(e) => set('nome', (e.target as HTMLInputElement).value)} />
           {erro(r.nome.trim().length < 2, 'Informe seu nome.')}
         </div>
         <div>
-          <label for="quiz-whats" class="mb-1.5 block text-sm font-medium text-ardosia">Seu WhatsApp</label>
+          <label for="quiz-whats" class="mb-1.5 block text-sm font-medium text-marinho-900">Seu WhatsApp</label>
           <input
             id="quiz-whats"
             class={campoCls}
@@ -284,7 +284,7 @@ export default function Quiz() {
     <dialog
       ref={dialogo}
       aria-labelledby="quiz-titulo"
-      class="m-0 mt-auto max-h-[94dvh] w-full max-w-none overflow-y-auto rounded-t-card bg-gelo p-0 text-ardosia backdrop:bg-ardosia/70 sm:m-auto sm:max-w-lg sm:rounded-card"
+      class="m-0 mt-auto max-h-[94dvh] w-full max-w-none overflow-y-auto rounded-t-card bg-gelo p-0 text-marinho-900 backdrop:bg-marinho-900/70 sm:m-auto sm:max-w-lg sm:rounded-card"
       onClose={() => setAberto(false)}
       onClick={(e) => e.target === dialogo.current && fechar()}
     >
@@ -314,7 +314,7 @@ export default function Quiz() {
             aria-valuenow={passo + 1}
             aria-label="Progresso do questionário"
           >
-            <div class="h-full rounded-full bg-laranja transition-[width] duration-300" style={{ width: `${((passo + 1) / TOTAL) * 100}%` }} />
+            <div class="h-full rounded-full bg-vinho transition-[width] duration-300" style={{ width: `${((passo + 1) / TOTAL) * 100}%` }} />
           </div>
         )}
 
@@ -332,13 +332,13 @@ export default function Quiz() {
                 Se a conversa não abriu, use o botão abaixo. Envie a mensagem pronta e eu respondo por lá.
               </p>
             )}
-            <pre class="max-h-48 overflow-auto whitespace-pre-wrap rounded-[var(--radius-moldura)] bg-branco p-4 text-sm text-ardosia">{concluido.mensagem}</pre>
+            <pre class="max-h-48 overflow-auto whitespace-pre-wrap rounded-[var(--radius-moldura)] bg-branco p-4 text-sm text-marinho-900">{concluido.mensagem}</pre>
             {!semNumero && (
               <a
                 href={concluido.url}
                 target="_blank"
                 rel="noopener"
-                class="inline-flex items-center justify-center rounded-full bg-laranja px-7 py-3.5 font-titulo text-sm font-bold text-preto hover:bg-ambar"
+                class="inline-flex items-center justify-center rounded-full bg-vinho px-7 py-3.5 font-titulo text-sm font-bold text-branco hover:bg-vinho-500"
               >
                 Abrir WhatsApp
               </a>
@@ -360,13 +360,13 @@ export default function Quiz() {
                 type="button"
                 onClick={() => { setTentou(false); setPasso((p) => Math.max(0, p - 1)); }}
                 disabled={passo === 0}
-                class="cursor-pointer rounded-full px-5 py-3 font-titulo text-sm font-semibold text-ardosia hover:bg-prata/40 disabled:invisible"
+                class="cursor-pointer rounded-full px-5 py-3 font-titulo text-sm font-semibold text-marinho-900 hover:bg-prata/40 disabled:invisible"
               >
                 Voltar
               </button>
               <button
                 type="submit"
-                class="inline-flex cursor-pointer items-center justify-center rounded-full bg-laranja px-7 py-3.5 font-titulo text-sm font-bold text-preto hover:bg-ambar"
+                class="inline-flex cursor-pointer items-center justify-center rounded-full bg-vinho px-7 py-3.5 font-titulo text-sm font-bold text-branco hover:bg-vinho-500"
               >
                 {passo === TOTAL - 1 ? 'Falar no WhatsApp' : 'Continuar'}
               </button>

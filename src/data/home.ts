@@ -23,41 +23,79 @@ export const hero = {
   selo: 'Atendemos todo o Brasil · 100% online',
   ctaPrincipal: 'Quero começar',
   ctaSecundario: 'Falar no WhatsApp',
-  fotoAlt: 'Ilustração de edifícios residenciais em tom âmbar',
+  fotoAlt: 'Prédios residenciais em meio a árvores, vistos do alto em uma grande cidade brasileira',
+  /** Card flutuante do hero (desktop). Valores reais só quando o cliente enviar. */
+  exemplo: {
+    titulo: 'Exemplo de arremate',
+    aviso: 'Exemplo ilustrativo',
+    pilula: 'Desconto real: [PREENCHER]%',
+    itens: [
+      { icone: 'casa' as IconeNome, valor: 'R$ [PREENCHER]', rotulo: 'Avaliação' },
+      { icone: 'dinheiro' as IconeNome, valor: 'R$ [PREENCHER]', rotulo: 'Arrematado' },
+      { icone: 'percentual' as IconeNome, valor: 'R$ [PREENCHER]', rotulo: 'Custo total' },
+    ],
+  },
+};
+
+export const jornadasSecao = {
+  eyebrow: 'Como posso ajudar',
+  titulo: 'Atuo em *todas as frentes*',
+  intro: 'Escolha o ponto em que você está. Eu adapto o acompanhamento ao seu momento.',
 };
 
 export const jornadas: {
   id: JornadaId;
+  /** Rótulo de intenção (chamada curta do card). */
+  rotulo: string;
   titulo: string;
   servico: string;
   texto: string;
+  bullets: string[];
   icone: IconeNome;
   cta: string;
+  destaque?: boolean;
 }[] = [
   {
     id: 'assessoria-completa',
+    rotulo: 'Eu cuido de tudo por você',
     titulo: 'Quero arrematar um imóvel',
     servico: 'Assessoria completa',
     texto:
-      'Acompanho você de ponta a ponta: perfil, busca de oportunidades, análise do edital e da matrícula, lance, pós-arrematação e entrega das chaves.',
+      'Acompanho você de ponta a ponta, do perfil à entrega das chaves.',
+    bullets: [
+      'Busca e filtro de oportunidades',
+      'Análise de edital e matrícula, com advogados parceiros',
+      'Lance, pós-arrematação e entrega das chaves',
+    ],
     icone: 'busca',
     cta: 'Começar por aqui',
+    destaque: true,
   },
   {
     id: 'consultoria-pontual',
+    rotulo: 'Você já escolheu, eu analiso',
     titulo: 'Já encontrei um imóvel',
     servico: 'Consultoria pontual',
-    texto:
-      'Antes de dar o lance, analiso os riscos do edital e da matrícula, débitos, ocupação, custo total real e o lance máximo recomendado.',
+    texto: 'Antes de dar o lance, você sabe o que está comprando.',
+    bullets: [
+      'Riscos do edital e da matrícula',
+      'Débitos e situação de ocupação',
+      'Custo total real e lance máximo recomendado',
+    ],
     icone: 'documento',
     cta: 'Analisar meu imóvel',
   },
   {
     id: 'pos-arrematacao',
+    rotulo: 'Já arrematou? Eu resolvo o pós',
     titulo: 'Já arrematei e preciso de ajuda',
     servico: 'Pós-arrematação',
-    texto:
-      'Arrematou sozinho e travou? Ajudo com regularização, registro, débitos e desocupação para você chegar às chaves.',
+    texto: 'Arrematou sozinho e travou? Eu ajudo você a chegar às chaves.',
+    bullets: [
+      'Regularização e registro do imóvel',
+      'Débitos do imóvel',
+      'Desocupação e entrega das chaves',
+    ],
     icone: 'chave',
     cta: 'Pedir ajuda',
   },
