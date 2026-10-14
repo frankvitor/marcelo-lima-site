@@ -14,9 +14,9 @@ const perguntas = (await getCollection('faq')).sort((a, b) => a.data.ordem - b.d
       {
         perguntas.map(({ data: p }) => (
           <details class="group reveal rounded-[var(--radius-moldura)] border border-linha bg-branco open:shadow-card">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-titulo font-semibold text-ardosia [&::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-titulo font-semibold text-marinho-900 [&::-webkit-details-marker]:hidden">
               {p.pergunta}
-              <span class="grid size-8 shrink-0 place-items-center rounded-full bg-ambar transition-transform group-open:rotate-45">
+              <span class="grid size-8 shrink-0 place-items-center rounded-full bg-vinho-50 transition-transform group-open:rotate-45">
                 <Icon nome="mais" class="size-4" />
               </span>
             </summary>

@@ -9,7 +9,7 @@ const ano = new Date().getFullYear();
 const redes = Object.entries(site.redes);
 ---
 
-<footer class="bg-ardosia text-prata">
+<footer class="bg-marinho-900 text-prata">
   <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.3fr_1fr_1fr]">
     <div class="flex flex-col gap-4">
       <Logo variante="negativa" class="h-12 w-auto self-start" />
@@ -29,7 +29,7 @@ const redes = Object.entries(site.redes);
       <ul class="flex flex-col gap-2 text-sm">
         <li>
           <a href={linkWhatsapp()} class="inline-flex items-center gap-2 hover:text-branco" data-whatsapp>
-            <Icon nome="mensagem" class="size-4" /> WhatsApp: {site.whatsapp}
+            <Icon nome="mensagem" class="size-4" /> WhatsApp: {site.whatsappExibicao}
           </a>
         </li>
         <li>E-mail: {site.email}</li>

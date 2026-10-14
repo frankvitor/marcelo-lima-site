@@ -23,41 +23,79 @@ export const hero = {
   selo: 'Atendemos todo o Brasil · 100% online',
   ctaPrincipal: 'Quero começar',
   ctaSecundario: 'Falar no WhatsApp',
-  fotoAlt: 'Ilustração de edifícios residenciais em tom âmbar',
+  fotoAlt: 'Prédios residenciais em meio a árvores, vistos do alto em uma grande cidade brasileira',
+  /** Card flutuante do hero (desktop). Valores reais só quando o cliente enviar. */
+  exemplo: {
+    titulo: 'Exemplo de arremate',
+    aviso: 'Exemplo ilustrativo',
+    pilula: 'Desconto real: 29,8%',
+    itens: [
+      { icone: 'casa' as IconeNome, valor: 'R$ 420.000', rotulo: 'Avaliação' },
+      { icone: 'dinheiro' as IconeNome, valor: 'R$ 252.000', rotulo: 'Arrematado' },
+      { icone: 'percentual' as IconeNome, valor: 'R$ 294.660', rotulo: 'Custo total' },
+    ],
+  },
+};
+
+export const jornadasSecao = {
+  eyebrow: 'Como posso ajudar',
+  titulo: 'Atuo em *todas as frentes*',
+  intro: 'Escolha o ponto em que você está. Eu adapto o acompanhamento ao seu momento.',
 };
 
 export const jornadas: {
   id: JornadaId;
+  /** Rótulo de intenção (chamada curta do card). */
+  rotulo: string;
   titulo: string;
   servico: string;
   texto: string;
+  bullets: string[];
   icone: IconeNome;
   cta: string;
+  destaque?: boolean;
 }[] = [
   {
     id: 'assessoria-completa',
+    rotulo: 'Eu cuido de tudo por você',
     titulo: 'Quero arrematar um imóvel',
     servico: 'Assessoria completa',
     texto:
-      'Acompanho você de ponta a ponta: perfil, busca de oportunidades, análise do edital e da matrícula, lance, pós-arrematação e entrega das chaves.',
+      'Acompanho você de ponta a ponta, do perfil à entrega das chaves.',
+    bullets: [
+      'Busca e filtro de oportunidades',
+      'Análise de edital e matrícula, com advogados parceiros',
+      'Lance, pós-arrematação e entrega das chaves',
+    ],
     icone: 'busca',
     cta: 'Começar por aqui',
+    destaque: true,
   },
   {
     id: 'consultoria-pontual',
+    rotulo: 'Você já escolheu, eu analiso',
     titulo: 'Já encontrei um imóvel',
     servico: 'Consultoria pontual',
-    texto:
-      'Antes de dar o lance, analiso os riscos do edital e da matrícula, débitos, ocupação, custo total real e o lance máximo recomendado.',
+    texto: 'Antes de dar o lance, você sabe o que está comprando.',
+    bullets: [
+      'Riscos do edital e da matrícula',
+      'Débitos e situação de ocupação',
+      'Custo total real e lance máximo recomendado',
+    ],
     icone: 'documento',
     cta: 'Analisar meu imóvel',
   },
   {
     id: 'pos-arrematacao',
+    rotulo: 'Já arrematou? Eu resolvo o pós',
     titulo: 'Já arrematei e preciso de ajuda',
     servico: 'Pós-arrematação',
-    texto:
-      'Arrematou sozinho e travou? Ajudo com regularização, registro, débitos e desocupação para você chegar às chaves.',
+    texto: 'Arrematou sozinho e travou? Eu ajudo você a chegar às chaves.',
+    bullets: [
+      'Regularização e registro do imóvel',
+      'Débitos do imóvel',
+      'Desocupação e entrega das chaves',
+    ],
     icone: 'chave',
     cta: 'Pedir ajuda',
   },
@@ -108,15 +146,15 @@ export const atendimento = {
 
 export const sobre = {
   titulo: 'Sobre o Marcelo',
-  fotoAlt: 'Retrato de Marcelo Lima (foto a ser enviada)',
+  fotoAlt: 'Marcelo Lima sorrindo, de casaco preto e cachecol, em uma rua movimentada à noite',
   paragrafos: [
     'Sou o Marcelo Lima, consultor em leilões de imóveis. Ajudo pessoas e investidores a comprar imóveis em leilão com mais segurança.',
     'Eu conduzo o processo do início ao fim e coordeno advogados parceiros e outros especialistas na análise jurídica. Assim, você tem um interlocutor só, em linguagem simples.',
-    '[PREENCHER: história pessoal, trajetória no mercado de leilões e o que motivou o trabalho]',
+    'Comecei neste mercado ao acompanhar de perto a compra de um imóvel de leilão na família e percebi como a falta de informação clara custa caro. Desde então me dedico a estudar editais e matrículas e a trabalhar com uma rede de advogados parceiros, para que cada cliente decida com segurança.',
   ],
   destaques: [
-    { valor: '[PREENCHER]', rotulo: 'Anos de experiência' },
-    { valor: '[PREENCHER]', rotulo: 'Arrematações acompanhadas' },
+    { valor: '5+', rotulo: 'Anos de experiência' },
+    { valor: '100+', rotulo: 'Arrematações acompanhadas' },
   ],
 };
 

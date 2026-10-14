@@ -1,6 +1,6 @@
 import { site } from '../config/site';
 
-/** Número só com dígitos (DDI+DDD+número) ou null enquanto estiver como [PREENCHER]. */
+/** Número só com dígitos (DDI+DDD+número) ou null se não estiver configurado. */
 export function numeroWhatsapp(): string | null {
   const digitos = site.whatsapp.replace(/\D/g, '');
   return digitos.length >= 10 ? digitos : null;

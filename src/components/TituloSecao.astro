@@ -1,0 +1,30 @@
+---
+// Título de seção no estilo editorial: eyebrow em caixa-alta + título em caixa normal com
+// palavra(s) em destaque marcadas com *asteriscos*. Ex.: "Atuo em *todas as frentes*".
+interface Props {
+  eyebrow?: string;
+  titulo: string;
+  intro?: string;
+  nivel?: 'h1' | 'h2';
+  /** true quando o fundo é escuro (marinho). */
+  claro?: boolean;
+  centro?: boolean;
+}
+const { eyebrow, titulo, intro, nivel: Tag = 'h2', claro = false, centro = false } = Astro.props;
+
+const partes = titulo.split(/\*([^*]+)\*/g); // posições ímpares = destaque
+---
+
+<div class={`flex flex-col gap-3 ${centro ? 'items-center text-center' : 'items-start'}`}>
+  {
+    eyebrow && (
+      <p class={`font-texto text-xs font-semibold uppercase tracking-[0.18em] ${claro ? 'text-rosa' : 'text-vinho'}`}>
+        {eyebrow}
+      </p>
+    )
+  }
+  <Tag class={`text-3xl sm:text-4xl lg:text-[2.6rem] ${claro ? 'text-branco' : 'text-marinho-900'}`}>
+    {partes.map((p, i) => (i % 2 === 1 ? <span class={claro ? 'text-rosa' : 'text-vinho'}>{p}</span> : p))}
+  </Tag>
+  {intro && <p class={`max-w-2xl text-lg ${claro ? 'text-prata' : 'text-cinza'}`}>{intro}</p>}
+</div>

@@ -12,11 +12,11 @@ import { comoFunciona } from '../../data/home';
     <ol class="grid gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-5">
       {
         comoFunciona.etapas.map((e, i) => (
-          <li class="reveal relative flex flex-col gap-3 border-t-2 border-ardosia pt-5" style={`transition-delay:${i * 70}ms`}>
-            <span class="font-titulo text-5xl font-bold leading-none text-laranja" aria-hidden="true">
+          <li class="reveal relative flex flex-col gap-3 border-t-2 border-marinho-900 pt-5" style={`transition-delay:${i * 70}ms`}>
+            <span class="font-titulo text-5xl font-bold leading-none text-vinho" aria-hidden="true">
               {String(i + 1).padStart(2, '0')}
             </span>
-            <h3 class="text-lg leading-tight text-ardosia">
+            <h3 class="text-lg leading-tight text-marinho-900">
               <span class="sr-only">Etapa {i + 1}: </span>
               {e.titulo}
             </h3>

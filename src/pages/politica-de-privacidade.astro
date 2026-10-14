@@ -4,8 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../config/site';
 
-// Texto-base (LGPD). Revisar com advogado antes de publicar. Itens [PREENCHER] dependem do cliente.
-const atualizacao = '[PREENCHER: data da última atualização]';
+// Texto-base (LGPD) com prazos e ferramentas FICTÍCIOS de demonstração. Revisar com advogado antes de publicar.
+const atualizacao = '14 de outubro de 2026';
 ---
 
 <BaseLayout
@@ -17,7 +17,7 @@ const atualizacao = '[PREENCHER: data da última atualização]';
     <h1 class="mb-3 text-3xl sm:text-4xl">Política de privacidade</h1>
     <p class="mb-10 text-sm text-cinza">Última atualização: {atualizacao}</p>
 
-    <div class="flex flex-col gap-8 text-cinza [&_h2]:mb-2 [&_h2]:text-xl [&_h2]:normal-case [&_h2]:text-ardosia [&_ul]:ml-5 [&_ul]:list-disc [&_ul]:space-y-1">
+    <div class="flex flex-col gap-8 text-cinza [&_h2]:mb-2 [&_h2]:text-xl [&_h2]:normal-case [&_h2]:text-marinho-900 [&_ul]:ml-5 [&_ul]:list-disc [&_ul]:space-y-1">
       <section>
         <h2>1. Quem somos</h2>
         <p>
@@ -53,7 +53,7 @@ const atualizacao = '[PREENCHER: data da última atualização]';
         <h2>4. Base legal</h2>
         <p>
           O tratamento é feito com base no seu consentimento e, quando aplicável, para a realização de procedimentos
-          preliminares a um contrato solicitado por você (LGPD, art. 7º). [PREENCHER: revisar com advogado]
+          preliminares a um contrato solicitado por você (LGPD, art. 7º).
         </p>
       </section>
 
@@ -63,7 +63,7 @@ const atualizacao = '[PREENCHER: data da última atualização]';
           Ao concluir o questionário, você é direcionado ao WhatsApp (serviço da Meta) com uma mensagem resumindo suas
           respostas; o uso do WhatsApp segue os termos e a política de privacidade da própria plataforma. Quando
           necessário ao atendimento, podem participar advogados parceiros e outros especialistas, sempre sob dever de
-          sigilo. Não vendemos seus dados. [PREENCHER: confirmar se há CRM ou outras ferramentas]
+          sigilo. Não vendemos seus dados. Hoje não usamos CRM: as informações seguem apenas pelo WhatsApp.
         </p>
       </section>
 
@@ -71,14 +71,13 @@ const atualizacao = '[PREENCHER: data da última atualização]';
         <h2>6. Cookies e análise de uso</h2>
         <p>
           O site pode usar ferramentas como Google Analytics e Meta Pixel para medir audiência e campanhas. Elas ficam
-          desativadas por padrão e só funcionam se forem habilitadas pelo responsável do site. [PREENCHER: informar
-          quais estão ativas e incluir aviso de cookies, se aplicável]
+          desativadas por padrão e só funcionam se forem habilitadas pelo responsável do site. Se forem ativadas, esta página passará a informar quais são e como recusá-las.
         </p>
       </section>
 
       <section>
         <h2>7. Por quanto tempo guardamos</h2>
-        <p>[PREENCHER: prazo de retenção dos dados de contato]</p>
+        <p>Mantemos os dados de contato apenas pelo tempo necessário ao atendimento e por até 12 meses após o último contato, salvo obrigação legal.</p>
       </section>
 
       <section>

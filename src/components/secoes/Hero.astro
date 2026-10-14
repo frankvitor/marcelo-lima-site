@@ -1,40 +1,70 @@
 ---
+import { Picture } from 'astro:assets';
 import Button from '../Button.astro';
 import Pill from '../Pill.astro';
 import Icon from '../Icon.astro';
-import FotoDuotone from '../FotoDuotone.astro';
 import { hero } from '../../data/home';
 import { linkWhatsapp } from '../../lib/whatsapp';
-import predio from '../../assets/img/predio-placeholder.svg';
+import foto from '../../assets/img/fotos/hero-predios-sao-paulo.jpg';
 
 const whats = linkWhatsapp('Olá, Marcelo! Vim pelo site e gostaria de conversar sobre leilão de imóveis.');
+const ex = hero.exemplo;
 ---
 
-<section id="inicio" class="relative overflow-hidden">
-  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:py-24">
+<section id="inicio" class="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-marinho-950">
+  <Picture
+    src={foto}
+    alt={hero.fotoAlt}
+    widths={[640, 960, 1280, 1920]}
+    sizes="100vw"
+    formats={['avif', 'webp']}
+    loading="eager"
+    fetchpriority="high"
+    class="absolute inset-0 -z-20 h-full w-full object-cover"
+  />
+  <!-- Overlay marinho: legibilidade do texto + clima sóbrio -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-marinho-950/95 via-marinho-900/80 to-marinho-900/45" aria-hidden="true"></div>
+  <div class="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-marinho-950/70 to-transparent" aria-hidden="true"></div>
+
+  <div class="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 pb-20 pt-32 sm:pt-36 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
     <div class="flex flex-col items-start gap-6">
-      <Pill><Icon nome="pin" class="size-4" />{hero.selo}</Pill>
-      <h1 class="titulo-display text-[2.1rem] leading-[1.02] text-ardosia sm:text-5xl lg:text-[3.4rem]">
+      <Pill tom="escura"><Icon nome="pin" class="size-4" />{hero.selo}</Pill>
+      <h1 class="titulo-display text-[2.15rem] text-branco sm:text-5xl lg:text-[3.6rem]">
         {hero.titulo}
       </h1>
-      <p class="max-w-xl text-lg text-cinza">{hero.subtitulo}</p>
+      <p class="max-w-xl text-lg text-prata">{hero.subtitulo}</p>
       <div class="flex flex-wrap gap-3">
         <Button data-quiz>{hero.ctaPrincipal} <Icon nome="seta" class="size-4" /></Button>
-        <Button href={whats} variante="contorno" data-whatsapp>
+        <Button href={whats} variante="contornoClaro" data-whatsapp>
           <Icon nome="mensagem" class="size-4" />{hero.ctaSecundario}
         </Button>
       </div>
     </div>
 
-    <div class="relative">
-      <div class="absolute -right-3 -top-3 hidden h-full w-full rounded-card border-[1.5px] border-ardosia/40 sm:block" aria-hidden="true"></div>
-      <FotoDuotone src={predio.src} alt={hero.fotoAlt} class="relative aspect-[4/5] rounded-card shadow-card sm:aspect-[5/6]" />
-      <div class="absolute -bottom-5 left-5 flex items-center gap-3 rounded-card bg-branco px-5 py-4 shadow-card">
-        <Icon nome="chave" class="size-8 text-ardosia" />
-        <p class="font-titulo text-sm font-semibold leading-tight text-ardosia">
-          Do edital<br />às chaves
-        </p>
+    <!-- Card flutuante (só desktop): exemplo ilustrativo de arremate -->
+    <aside class="hidden lg:block" aria-label={ex.titulo}>
+      <div class="rounded-card bg-branco p-6 shadow-[var(--shadow-card-hover)]">
+        <div class="mb-4 flex items-start justify-between gap-3">
+          <div>
+            <p class="font-texto text-xs font-semibold uppercase tracking-[0.18em] text-vinho">{ex.titulo}</p>
+            <p class="mt-0.5 text-xs text-cinza">{ex.aviso}</p>
+          </div>
+        </div>
+        <Pill class="mb-4">{ex.pilula}</Pill>
+        <dl class="divide-y divide-linha">
+          {
+            ex.itens.map((i) => (
+              <div class="flex items-center justify-between gap-3 py-3">
+                <dt class="flex items-center gap-2.5 text-sm text-cinza">
+                  <Icon nome={i.icone} class="size-5 text-vinho" />
+                  {i.rotulo}
+                </dt>
+                <dd class="font-titulo font-bold text-marinho-900">{i.valor}</dd>
+              </div>
+            ))
+          }
+        </dl>
       </div>
-    </div>
+    </aside>
   </div>
 </section>

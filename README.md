@@ -20,11 +20,7 @@ Páginas: `/` (home), `/politica-de-privacidade`, `/404`. A página `/styleguide
 
 ## Onde editar o conteúdo
 
-Tudo que o cliente ainda precisa informar está marcado como `[PREENCHER]`. Para achar todos:
-
-```bash
-grep -rn "PREENCHER" src
-```
+**Modo demonstração:** hoje contatos, CNPJ, redes, história do Marcelo, valores do hero, cases e trechos da política de privacidade são dados FICTÍCIOS. A lista do que trocar está em [docs/PENDENCIAS.md](docs/PENDENCIAS.md). Em `src/config/site.ts`, a flag `demo` deve virar `false` quando os dados reais entrarem.
 
 | O quê | Arquivo |
 |---|---|
@@ -56,7 +52,7 @@ Para adicionar um depoimento, inclua um objeto em `src/content/depoimentos.json`
 ## Quiz, simulador e WhatsApp
 
 - O quiz abre por qualquer elemento com o atributo `data-quiz` (e `data-jornada="consultoria-pontual"` para já marcar a jornada). O simulador abre o quiz pelo evento definido em `src/lib/quizEvents.ts`.
-- Ao concluir, abre `https://wa.me/<número>?text=<mensagem>`. Enquanto `whatsapp` estiver como `[PREENCHER]` em `src/config/site.ts`, o quiz mostra a mensagem na tela em vez de abrir o WhatsApp. Use só dígitos com DDI, ex.: `5511999999999`.
+- Ao concluir, abre `https://wa.me/<número>?text=<mensagem>`. O número fica em `src/config/site.ts` (hoje FICTÍCIO: 5511900000000). Sem número válido, o quiz mostra a mensagem na tela em vez de abrir o WhatsApp. Use só dígitos com DDI, ex.: `5511999999999`.
 - `src/lib/leads.ts` tem `enviarLead(dados)`, hoje um no-op documentado. Quando houver CRM (Supabase), é ali que o lead será gravado antes de abrir o WhatsApp.
 
 ## Analytics (desligado por padrão)

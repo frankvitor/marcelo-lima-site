@@ -1,7 +1,8 @@
 # Pendências de conteúdo
 
-Tudo que o cliente (Marcelo) precisa enviar ou decidir. Os itens aparecem no site como `[PREENCHER]`.
-Para localizar no código: `grep -rn "PREENCHER" src`.
+> **ATENÇÃO — site em modo demonstração.** A pedido do cliente, todos os campos que estavam como `[PREENCHER]` foram preenchidos com dados **FICTÍCIOS**: WhatsApp (11) 90000-0000, e-mail, CNPJ 00.000.000/0001-00, redes sociais, texto de história do Marcelo, valores do card do hero, os 3 cases, prazo de retenção e data da política de privacidade. **Nada disso pode ir ao ar como real.** Os itens abaixo continuam sendo o que o cliente precisa enviar para substituir os dados fictícios. Ao trocar os contatos em `src/config/site.ts`, mude `demo` para `false` (assim telefone e e-mail passam a entrar no JSON-LD).
+
+Tudo que o cliente (Marcelo) precisa enviar ou decidir. Para localizar os dados fictícios: `src/config/site.ts`, `src/data/home.ts`, `src/content/*.json` e `src/pages/politica-de-privacidade.astro`.
 
 ## 1. Contato e identificação — `src/config/site.ts`
 - [ ] Número de WhatsApp (com DDI e DDD). Enquanto faltar, os botões de WhatsApp apontam para a âncora de contato e o quiz só mostra a mensagem na tela.
@@ -12,13 +13,13 @@ Para localizar no código: `grep -rn "PREENCHER" src`.
 
 ## 2. Sobre o Marcelo — `src/data/home.ts` (bloco `sobre`)
 - [ ] História pessoal e trajetória no mercado de leilões (texto em primeira pessoa)
-- [ ] Anos de experiência
-- [ ] Número de arrematações acompanhadas
-- [ ] Foto profissional (hoje há uma silhueta provisória em `src/assets/img/foto-marcelo-placeholder.svg`)
+- [x] Anos de experiência (informado: 5+)
+- [x] Número de arrematações acompanhadas (informado: 100+)
+- [x] Foto recebida (retrato casual, em rua à noite). Se o cliente preferir uma foto profissional de estúdio, substituir `src/assets/img/foto-marcelo.png`
 
 ## 3. Cases — `src/content/cases.json`
 - [ ] Casos reais, com autorização do cliente: tipo de imóvel, cidade/UF, valor de avaliação, valor arrematado, custo total, desconto real e prazo até as chaves
-- [ ] Trocar os 3 exemplos ilustrativos (`"exemplo": true`) pelos casos reais
+- [ ] Trocar os 3 exemplos por casos reais. Hoje os cases têm dados FICTÍCIOS (a pedido do cliente, para demonstração) e aparecem com o aviso "Exemplo ilustrativo". Antes de publicar, substituir ou remover, e só tirar o aviso (`"exemplo": false`) com casos reais
 
 ## 4. Depoimentos — `src/content/depoimentos.json`
 - [ ] Depoimentos reais (nome, cidade e texto, com autorização). Enquanto a lista estiver vazia, a seção não aparece.

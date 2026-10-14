@@ -1,18 +1,19 @@
 ---
 interface Props {
-  tom?: 'solida' | 'clara' | 'branca';
+  tom?: 'solida' | 'clara' | 'branca' | 'escura';
   class?: string;
 }
 const { tom = 'solida', class: classe = '' } = Astro.props;
 const tons = {
-  solida: 'bg-laranja text-preto',
-  clara: 'bg-ambar/40 text-ardosia',
-  branca: 'bg-branco text-ardosia',
+  solida: 'bg-vinho text-branco',
+  clara: 'bg-vinho-50 text-marinho-900',
+  branca: 'bg-branco text-marinho-900',
+  escura: 'border border-branco/30 bg-branco/10 text-branco backdrop-blur',
 };
 ---
 
 <span
-  class={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-titulo text-sm font-bold ${tons[tom]} ${classe}`}
+  class={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-texto text-sm font-semibold ${tons[tom]} ${classe}`}
 >
   <slot />
 </span>
